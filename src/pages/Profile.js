@@ -13,11 +13,16 @@ const Profile = () => {
   const display = {
     display: "flex",
     "justify-content": "space-between",
+    "background-color": "#545454",
+    "border-radius": "1rem",
+    // eslint-disable-next-line
+    color: "#FFF9C0",
   };
 
   const mystyles = {
     "font-family": "'Kadwa', serif",
     "font-size": "7rem",
+    "padding-right": "1rem",
   };
 
   return (
@@ -25,7 +30,7 @@ const Profile = () => {
       <IonThumbnail style={{ height: "25%", width: "25%" }}>
         <IonImg
           src={"https://i.imgur.com/lq1p6Ll.png?1"}
-          style={{ "border-radius": "1rem" }}
+          style={{ "border-radius": "" }}
         />
       </IonThumbnail>
       <div style={mystyles}>Daniel Nascimento</div>
