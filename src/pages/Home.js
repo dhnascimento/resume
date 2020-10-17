@@ -4,20 +4,31 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonGrid,
+  IonRow,
+  IonCol,
 } from "@ionic/react";
 import React from "react";
 import ExploreContainer from "../components/ExploreContainer";
+import Profile from "./Profile";
+import Description from "./DescriptionFlip";
 
 const Home = () => {
   return (
     <IonPage>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent>
+        <IonGrid fixed={false}>
+          <IonRow className="ion-justify-content-center">
+            <IonCol>
+              <Profile />
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              <Description />
+            </IonCol>
+          </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
