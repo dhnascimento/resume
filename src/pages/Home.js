@@ -1,18 +1,9 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonGrid,
-  IonRow,
-  IonCol,
-} from "@ionic/react";
+import { IonContent, IonPage, IonGrid, IonRow, IonCol } from "@ionic/react";
 import React from "react";
-import ExploreContainer from "../components/ExploreContainer";
 import Profile from "./Profile";
 import Description from "./DescriptionFlip";
 import About from "./About";
+import Slides from "./Slides";
 
 const Home = () => {
   return (
@@ -31,6 +22,9 @@ const Home = () => {
           </IonRow>
           <IonRow>
             <About />
+          </IonRow>
+          <IonRow className="ion-justify-content-center">
+            <Slides />
           </IonRow>
         </IonGrid>
       </IonContent>
