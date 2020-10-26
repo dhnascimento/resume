@@ -12,6 +12,7 @@ import React from "react";
 import ExploreContainer from "../components/ExploreContainer";
 import Profile from "./Profile";
 import Description from "./DescriptionFlip";
+import About from "./About";
 
 const Home = () => {
   return (
@@ -27,6 +28,9 @@ const Home = () => {
             <IonCol>
               <Description />
             </IonCol>
+          </IonRow>
+          <IonRow>
+            <About />
           </IonRow>
         </IonGrid>
       </IonContent>
