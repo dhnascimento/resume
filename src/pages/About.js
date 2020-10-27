@@ -4,8 +4,14 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <IonTitle>About me</IonTitle>
-      <p>
+      <h3 style={{ "text-align": "center" }}>About me</h3>
+      <p
+        style={{
+          "text-align": "justify",
+          "padding-right": "10px",
+          "padding-left": "10px",
+        }}
+      >
         {" "}
         I have over 9 years of experience in the banking and finance industries.
         I’ve always enjoyed working in helping people finding the most suitable
