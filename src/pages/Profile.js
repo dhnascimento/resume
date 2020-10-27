@@ -1,17 +1,7 @@
-import {
-  IonContent,
-  IonHeader,
-  IonImg,
-  IonPage,
-  IonTitle,
-  IonThumbnail,
-  IonToolbar,
-  IonIcon,
-} from "@ionic/react";
+import { IonImg, IonThumbnail, IonIcon } from "@ionic/react";
 import { logoLinkedin, logoGithub } from "ionicons/icons";
 import React from "react";
-import { Link } from "react-router-dom";
-import Description from "./DescriptionFlip";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const Profile = () => {
   const display = {
@@ -19,25 +9,43 @@ const Profile = () => {
     "justify-content": "space-between",
     "background-color": "#545454",
     "border-radius": "1rem",
-    height: "80%",
+    height: "77%",
     color: "#FFF9C0",
   };
 
+  const GFontSize = useMediaQuery("(min-width: 1550px)");
+  const MFontSize = useMediaQuery("(min-width: 1200px)");
+  const SFontSize = useMediaQuery("(min-width: 770px)");
+
   const mystyles = {
-    "font-family": "'Kadwa', serif",
-    "font-size": "7rem",
-    "padding-right": "1rem",
+    container: (GFontSize, MFontSize, SFontSize) => ({
+      fontFamily: "'Kadwa', serif",
+      fontSize: GFontSize
+        ? "7rem"
+        : MFontSize
+        ? "4rem"
+        : SFontSize
+        ? "3rem"
+        : "1.21rem",
+      paddingRight: "1rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+    }),
   };
 
   const anchor = {
     color: "#FFF9C0",
     display: "flex",
-    "align-items": "flex-end",
+    alignItems: "flex-end",
   };
 
   const anchorDisplay = {
-    display: "flex",
-    "flex-direction": "row-reverse",
+    container: (SFontSize) => ({
+      display: "flex",
+      flexDirection: "row-reverse",
+      fontSize: SFontSize ? "3rem" : "1.3rem",
+    }),
   };
 
   return (
@@ -45,9 +53,9 @@ const Profile = () => {
       <IonThumbnail style={{ height: "100%", width: "25%" }}>
         <IonImg src={"https://i.imgur.com/lq1p6Ll.png?1"} />
       </IonThumbnail>
-      <div style={mystyles}>
+      <div style={mystyles.container(GFontSize, MFontSize, SFontSize)}>
         <span>Daniel Nascimento</span>
-        <div style={anchorDisplay}>
+        <div style={anchorDisplay.container(SFontSize)}>
           <a href="http://linkedin.com/in/danielhnascimento" style={anchor}>
             <IonIcon icon={logoLinkedin} />
           </a>
