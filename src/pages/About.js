@@ -4,9 +4,18 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const About = () => {
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
-  const MobileMediaQuery = useMediaQuery("(min-width: 575px)");
 
-  const title = <h3 style={{ "text-align": "center" }}>About me</h3>;
+  const title = (
+    <h3
+      style={{
+        "text-align": "center",
+        "background-color": "#fac901",
+        // color: "#ffffff",
+      }}
+    >
+      About me
+    </h3>
+  );
 
   const text = (
     <p
@@ -28,17 +37,41 @@ const About = () => {
     </p>
   );
 
+  const yellowColumn = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fac901",
+    borderRight: "5px solid #000000",
+    // borderStyle: "solid",
+    // borderWidth: "5px",
+  };
+
   const RegularGrid = (
-    <IonRow>
-      <IonCol>{title}</IonCol>
+    <IonRow
+      style={{
+        "border-color": "#000000",
+        "border-style": "solid",
+        "border-width": "5px",
+      }}
+    >
+      <IonCol style={yellowColumn}>{title}</IonCol>
       <IonCol>{text}</IonCol>
     </IonRow>
   );
 
   const SmallGrid = (
     <IonCol>
-      <IonCol>{title}</IonCol>
-      <IonCol>{text}</IonCol>
+      <IonCol style={yellowColumn}>{title}</IonCol>
+      <IonCol
+        style={{
+          "border-color": "#000000",
+          "border-style": "solid",
+          "border-width": "5px",
+        }}
+      >
+        {text}
+      </IonCol>
     </IonCol>
   );
 

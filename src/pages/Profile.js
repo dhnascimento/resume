@@ -7,11 +7,13 @@ import Description from "./DescriptionFlip";
 const Profile = () => {
   const display = {
     display: "flex",
-    "justify-content": "space-between",
-    "background-color": "#545454",
-    "border-radius": "1rem",
+    justifyContent: "space-between",
+    backgroundColor: "#225095",
     height: "77%",
-    color: "#FFF9C0",
+    color: "#FFFFFF",
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderWidth: "5px",
   };
 
   const LMediaQuery = useMediaQuery("(min-width: 1551px)");
@@ -39,7 +41,7 @@ const Profile = () => {
   };
 
   const anchor = {
-    color: "#FFF9C0",
+    color: "#FFFFFF",
     display: "flex",
     alignItems: "flex-end",
   };
@@ -54,7 +56,13 @@ const Profile = () => {
 
   return (
     <div style={display}>
-      <IonThumbnail style={{ height: "100%", width: "25%" }}>
+      <IonThumbnail
+        style={{
+          height: "100%",
+          width: "25%",
+          "border-right": "5px solid #000000",
+        }}
+      >
         <IonImg src={"https://i.imgur.com/lq1p6Ll.png?1"} />
       </IonThumbnail>
       <div
