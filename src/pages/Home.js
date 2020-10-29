@@ -16,11 +16,11 @@ const Home = () => {
               <Profile />
             </IonCol>
           </IonRow>
-          <IonRow>
+          {/* <IonRow>
             <IonCol>
               <Description />
             </IonCol>
-          </IonRow>
+          </IonRow> */}
           <IonRow>
             <About />
           </IonRow>
