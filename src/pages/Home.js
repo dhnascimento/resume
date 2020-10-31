@@ -7,6 +7,14 @@ import Slides from "./Slides";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const Home = () => {
+  const MobileMediaQuery = useMediaQuery("(min-width: 575px)");
+
+  const rowStyle = {
+    container: (MobileMediaQuery) => ({
+      marginTop: MobileMediaQuery ? "-0.87vw" : "-7vw",
+    }),
+  };
+
   return (
     <IonPage>
       <IonContent>
@@ -16,15 +24,10 @@ const Home = () => {
               <Profile />
             </IonCol>
           </IonRow>
-          {/* <IonRow>
-            <IonCol>
-              <Description />
-            </IonCol>
-          </IonRow> */}
-          <IonRow>
+          <IonRow style={rowStyle.container(MobileMediaQuery)}>
             <About />
           </IonRow>
-          <IonRow className="ion-justify-content-center">
+          <IonRow>
             <Slides />
           </IonRow>
         </IonGrid>

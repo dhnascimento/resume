@@ -5,26 +5,37 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 const About = () => {
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
 
-  const title = (
-    <h3
-      style={{
-        "text-align": "center",
-        "background-color": "#fac901",
-        // color: "#ffffff",
-      }}
-    >
-      About me
-    </h3>
-  );
+  const titleStyle = {
+    textAlign: "center",
+    backgroundColor: "#fac901",
+  };
+
+  const textStyle = {
+    textAlign: "justify",
+    paddingRight: "10px",
+    paddingLeft: "10px",
+  };
+
+  const yellowColumn = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fac901",
+    borderRight: "5px solid #000000",
+    // borderStyle: "solid",
+    // borderWidth: "5px",
+  };
+
+  const GridStyle = {
+    borderColor: "#000000",
+    borderRight: "5px solid",
+    borderLeft: "5px solid",
+  };
+
+  const title = <h3 style={titleStyle}>About me</h3>;
 
   const text = (
-    <p
-      style={{
-        "text-align": "justify",
-        "padding-right": "10px",
-        "padding-left": "10px",
-      }}
-    >
+    <p style={textStyle}>
       {" "}
       I have over 9 years of experience in the banking and finance industries.
       I’ve always enjoyed working in helping people finding the most suitable
@@ -37,24 +48,8 @@ const About = () => {
     </p>
   );
 
-  const yellowColumn = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fac901",
-    borderRight: "5px solid #000000",
-    // borderStyle: "solid",
-    // borderWidth: "5px",
-  };
-
   const RegularGrid = (
-    <IonRow
-      style={{
-        "border-color": "#000000",
-        "border-style": "solid",
-        "border-width": "5px",
-      }}
-    >
+    <IonRow style={GridStyle}>
       <IonCol style={yellowColumn}>{title}</IonCol>
       <IonCol>{text}</IonCol>
     </IonRow>
@@ -63,15 +58,7 @@ const About = () => {
   const SmallGrid = (
     <IonCol>
       <IonCol style={yellowColumn}>{title}</IonCol>
-      <IonCol
-        style={{
-          "border-color": "#000000",
-          "border-style": "solid",
-          "border-width": "5px",
-        }}
-      >
-        {text}
-      </IonCol>
+      <IonCol style={GridStyle}>{text}</IonCol>
     </IonCol>
   );
 

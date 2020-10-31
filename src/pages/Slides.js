@@ -10,47 +10,57 @@ const slideOpts = {
   // width: "100%",
 };
 
-const Slides = () => {
-  const mySlides = useRef(null);
+const buttons = {
+  display: "flex",
+  justifyContent: "center",
+  borderColor: "#000000",
+  borderRight: "5px solid",
+  borderLeft: "5px solid",
+};
 
-  const getIndex = async (string) => {
-    const swipe = await mySlides.current.getSwiper();
-    if (string === "next") {
-      swipe.slideNext();
-    } else if (string === "previous") {
-      swipe.slidePrev();
-    }
-  };
+const paragraph = {
+  textAlign: "justify",
+  paddingRight: "10px",
+  paddingLeft: "10px",
+};
+
+const Slides = () => {
+  // const mySlides = useRef(null);
+
+  // const getIndex = async (string) => {
+  //   const swipe = await mySlides.current.getSwiper();
+  //   if (string === "next") {
+  //     swipe.slideNext();
+  //   } else if (string === "previous") {
+  //     swipe.slidePrev();
+  //   }
+  // };
 
   const singleSlide = useRef(null);
   const selectSlide = async (index) => {
-    const swipe = await mySlides.current.getSwiper();
+    const swipe = await singleSlide.current.getSwiper();
     swipe.slideTo(index);
   };
 
   return (
     <div style={{ width: "100%" }}>
-      <IonButton color="primary" onClick={() => selectSlide(0)}>
-        Expertise
-      </IonButton>
-      <IonButton color="primary" onClick={() => selectSlide(1)}>
-        Skills
-      </IonButton>
-      <IonButton color="primary" onClick={() => selectSlide(2)}>
-        Projects
-      </IonButton>
-      <IonSlides options={slideOpts} ref={mySlides}>
+      <div style={buttons}>
+        <IonButton color="primary" onClick={() => selectSlide(0)}>
+          Expertise
+        </IonButton>
+        <IonButton color="primary" onClick={() => selectSlide(1)}>
+          Skills
+        </IonButton>
+        <IonButton color="primary" onClick={() => selectSlide(2)}>
+          Projects
+        </IonButton>
+      </div>
+      <IonSlides options={slideOpts} ref={singleSlide}>
         <IonSlide>
           <h1>Slide 1</h1>
         </IonSlide>
         <IonSlide>
-          <p
-            style={{
-              "text-align": "justify",
-              "padding-right": "10px",
-              "padding-left": "10px",
-            }}
-          >
+          <p style={paragraph}>
             {" "}
             I have over 9 years of experience in the banking and finance
             industries. I’ve always enjoyed working in helping people finding
