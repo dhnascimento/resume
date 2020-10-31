@@ -17,22 +17,26 @@ const About = () => {
   };
 
   const yellowColumn = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fac901",
-    borderRight: "5px solid #000000",
-    // borderStyle: "solid",
-    // borderWidth: "5px",
+    container: (SMediaQuery) => ({
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#fac901",
+      borderRight: SMediaQuery ? "5px solid #000000" : "0px solid #000000",
+      borderBottom: SMediaQuery ? "0px solid #000000" : "5px solid #000000",
+      marginTop: SMediaQuery ? "0px" : "0px",
+    }),
   };
 
-  const GridStyle = {
+  const gridStyle = {
     borderColor: "#000000",
-    borderRight: "5px solid",
-    borderLeft: "5px solid",
   };
 
-  const title = <h3 style={titleStyle}>About me</h3>;
+  const gridBorder = {
+    padding: "0px",
+  };
+
+  const title = <div style={titleStyle}>About me</div>;
 
   const text = (
     <p style={textStyle}>
@@ -49,22 +53,24 @@ const About = () => {
   );
 
   const RegularGrid = (
-    <IonRow style={GridStyle}>
-      <IonCol style={yellowColumn}>{title}</IonCol>
+    <IonRow style={gridStyle}>
+      <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
       <IonCol>{text}</IonCol>
     </IonRow>
   );
 
   const SmallGrid = (
-    <IonCol>
-      <IonCol style={yellowColumn}>{title}</IonCol>
-      <IonCol style={GridStyle}>{text}</IonCol>
-    </IonCol>
+    <div>
+      <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
+      <IonCol style={gridStyle}>{text}</IonCol>
+    </div>
   );
 
   return (
     <div>
-      <IonGrid fixed={false}>{SMediaQuery ? RegularGrid : SmallGrid}</IonGrid>
+      <IonGrid fixed={false} style={gridBorder}>
+        {SMediaQuery ? RegularGrid : SmallGrid}
+      </IonGrid>
     </div>
   );
 };

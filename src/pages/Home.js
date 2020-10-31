@@ -11,16 +11,34 @@ const Home = () => {
 
   const rowStyle = {
     container: (MobileMediaQuery) => ({
-      marginTop: MobileMediaQuery ? "-0.87vw" : "-7vw",
+      // marginTop: MobileMediaQuery ? "-0.87vw" : "-7vw",
     }),
+  };
+
+  const gridBorder = {
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderWidth: "5px",
+    padding: "0px",
+    margin: "10px",
+  };
+
+  const colBorder = {
+    padding: "0px",
+  };
+
+  const rowBorder = {
+    height: "19vw",
+    borderColor: "#000000",
+    borderBottom: "5px solid",
   };
 
   return (
     <IonPage>
       <IonContent>
-        <IonGrid fixed={false}>
-          <IonRow style={{ height: "19vw" }}>
-            <IonCol>
+        <IonGrid fixed={false} style={gridBorder}>
+          <IonRow style={rowBorder}>
+            <IonCol style={colBorder}>
               <Profile />
             </IonCol>
           </IonRow>

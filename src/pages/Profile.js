@@ -9,11 +9,8 @@ const Profile = () => {
     display: "flex",
     justifyContent: "space-between",
     backgroundColor: "#225095",
-    height: "77%",
+    height: "81.5%",
     color: "#FFFFFF",
-    borderColor: "#000000",
-    borderStyle: "solid",
-    borderWidth: "5px",
   };
 
   const LMediaQuery = useMediaQuery("(min-width: 1551px)");

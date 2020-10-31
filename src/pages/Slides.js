@@ -14,8 +14,7 @@ const buttons = {
   display: "flex",
   justifyContent: "center",
   borderColor: "#000000",
-  borderRight: "5px solid",
-  borderLeft: "5px solid",
+  borderTop: "5px solid",
 };
 
 const paragraph = {
