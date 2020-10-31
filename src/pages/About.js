@@ -4,10 +4,19 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const About = () => {
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
+  const MobileMediaQuery = useMediaQuery("(min-width: 575px)");
 
   const titleStyle = {
-    textAlign: "center",
-    backgroundColor: "#fac901",
+    container: (SMediaQuery, MobileMediaQuery) => ({
+      fontFamily: "'Kadwa', serif",
+      fontSize: SMediaQuery
+        ? "xx-large"
+        : MobileMediaQuery
+        ? "x-large"
+        : "large",
+      textAlign: "center",
+      backgroundColor: "#fac901",
+    }),
   };
 
   const textStyle = {
@@ -36,7 +45,11 @@ const About = () => {
     padding: "0px",
   };
 
-  const title = <div style={titleStyle}>About me</div>;
+  const title = (
+    <div style={titleStyle.container(SMediaQuery, MobileMediaQuery)}>
+      About me
+    </div>
+  );
 
   const text = (
     <p style={textStyle}>
@@ -55,7 +68,7 @@ const About = () => {
   const RegularGrid = (
     <IonRow style={gridStyle}>
       <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
-      <IonCol>{text}</IonCol>
+      <IonCol offset="2 ">{text}</IonCol>
     </IonRow>
   );
 

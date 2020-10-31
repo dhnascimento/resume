@@ -74,6 +74,57 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #e0e0e0;
   --ion-color-light-tint: #ffffff;
+
+  /** expertise **/
+  --ion-color-expertise: #225095;
+  --ion-color-expertise-rgb: 34, 80, 149;
+  --ion-color-expertise-contrast: #ffffff;
+  --ion-color-expertise-contrast-rgb: 255, 255, 255;
+  --ion-color-expertise-shade: #1e4683;
+  --ion-color-expertise-tint: #3862a0;
+
+  /** skills **/
+  --ion-color-skills: #dd0100;
+  --ion-color-skills-rgb: 221, 1, 0;
+  --ion-color-skills-contrast: #ffffff;
+  --ion-color-skills-contrast-rgb: 255, 255, 255;
+  --ion-color-skills-shade: #c20100;
+  --ion-color-skills-tint: #e01a1a;
+
+  /** projects **/
+  --ion-color-projects: #fac901;
+  --ion-color-projects-rgb: 250, 201, 1;
+  --ion-color-projects-contrast: #000000;
+  --ion-color-projects-contrast-rgb: 0, 0, 0;
+  --ion-color-projects-shade: #dcb101;
+  --ion-color-projects-tint: #fbce1a;
+}
+
+.ion-color-expertise {
+  --ion-color-base: var(--ion-color-expertise);
+  --ion-color-base-rgb: var(--ion-color-expertise-rgb);
+  --ion-color-contrast: var(--ion-color-expertise-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-expertise-contrast-rgb);
+  --ion-color-shade: var(--ion-color-expertise-shade);
+  --ion-color-tint: var(--ion-color-expertise-tint);
+}
+
+.ion-color-skills {
+  --ion-color-base: var(--ion-color-skills);
+  --ion-color-base-rgb: var(--ion-color-skills-rgb);
+  --ion-color-contrast: var(--ion-color-skills-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-skills-contrast-rgb);
+  --ion-color-shade: var(--ion-color-skills-shade);
+  --ion-color-tint: var(--ion-color-skills-tint);
+}
+
+.ion-color-projects {
+  --ion-color-base: var(--ion-color-projects);
+  --ion-color-base-rgb: var(--ion-color-projects-rgb);
+  --ion-color-contrast: var(--ion-color-projects-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-projects-contrast-rgb);
+  --ion-color-shade: var(--ion-color-projects-shade);
+  --ion-color-tint: var(--ion-color-projects-tint);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,6 +196,14 @@ http://ionicframework.com/docs/theming/ */
     --ion-color-light-contrast-rgb: 255, 255, 255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+    /** expertise **/
+    --ion-color-expertise: #225095;
+    --ion-color-expertise-rgb: 34, 80, 149;
+    --ion-color-expertise-contrast: #ffffff;
+    --ion-color-expertise-contrast-rgb: 255, 255, 255;
+    --ion-color-expertise-shade: #1e4683;
+    --ion-color-expertise-tint: #3862a0;
   }
 
   /*

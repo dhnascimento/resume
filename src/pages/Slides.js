@@ -44,13 +44,13 @@ const Slides = () => {
   return (
     <div style={{ width: "100%" }}>
       <div style={buttons}>
-        <IonButton color="primary" onClick={() => selectSlide(0)}>
+        <IonButton color="expertise" onClick={() => selectSlide(0)}>
           Expertise
         </IonButton>
-        <IonButton color="primary" onClick={() => selectSlide(1)}>
+        <IonButton color="skills" onClick={() => selectSlide(1)}>
           Skills
         </IonButton>
-        <IonButton color="primary" onClick={() => selectSlide(2)}>
+        <IonButton color="projects" onClick={() => selectSlide(2)}>
           Projects
         </IonButton>
       </div>
