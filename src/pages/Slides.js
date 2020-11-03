@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
-import { IonSlides, IonSlide, IonButton, IonIcon } from "@ionic/react";
-import { caretBackOutline, caretForwardOutline } from "ionicons/icons";
+import {
+  IonLabel,
+  IonList,
+  IonItem,
+  IonSlides,
+  IonSlide,
+  IonButton,
+  IonIcon,
+} from "@ionic/react";
+import Expertise from "./Slides/Expertise";
 
 // Optional parameters to pass to the swiper instance.
 // See http://idangero.us/swiper/api/ for valid options.
@@ -15,6 +23,11 @@ const buttons = {
   justifyContent: "center",
   borderColor: "#000000",
   borderTop: "5px solid",
+  borderBottom: "5px solid",
+};
+
+const buttonSize = {
+  width: "6rem",
 };
 
 const paragraph = {
@@ -24,17 +37,6 @@ const paragraph = {
 };
 
 const Slides = () => {
-  // const mySlides = useRef(null);
-
-  // const getIndex = async (string) => {
-  //   const swipe = await mySlides.current.getSwiper();
-  //   if (string === "next") {
-  //     swipe.slideNext();
-  //   } else if (string === "previous") {
-  //     swipe.slidePrev();
-  //   }
-  // };
-
   const singleSlide = useRef(null);
   const selectSlide = async (index) => {
     const swipe = await singleSlide.current.getSwiper();
@@ -44,19 +46,31 @@ const Slides = () => {
   return (
     <div style={{ width: "100%" }}>
       <div style={buttons}>
-        <IonButton color="expertise" onClick={() => selectSlide(0)}>
+        <IonButton
+          color="expertise"
+          style={buttonSize}
+          onClick={() => selectSlide(0)}
+        >
           Expertise
         </IonButton>
-        <IonButton color="skills" onClick={() => selectSlide(1)}>
+        <IonButton
+          color="skills"
+          style={buttonSize}
+          onClick={() => selectSlide(1)}
+        >
           Skills
         </IonButton>
-        <IonButton color="projects" onClick={() => selectSlide(2)}>
+        <IonButton
+          color="projects"
+          style={buttonSize}
+          onClick={() => selectSlide(2)}
+        >
           Projects
         </IonButton>
       </div>
       <IonSlides options={slideOpts} ref={singleSlide}>
         <IonSlide>
-          <h1>Slide 1</h1>
+          <Expertise />
         </IonSlide>
         <IonSlide>
           <p style={paragraph}>
@@ -76,12 +90,6 @@ const Slides = () => {
           <h1>Slide 3</h1>
         </IonSlide>
       </IonSlides>
-      {/* <IonButton color="primary" onClick={() => getIndex("previous")}>
-        <IonIcon icon={caretBackOutline} />
-      </IonButton>
-      <IonButton color="primary" onClick={() => getIndex("next")}>
-        <IonIcon icon={caretForwardOutline} />
-      </IonButton> */}
     </div>
   );
 };
