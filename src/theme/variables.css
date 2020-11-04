@@ -206,6 +206,10 @@ http://ionicframework.com/docs/theming/ */
     --ion-color-expertise-tint: #3862a0;
   }
 
+  li {
+    margin-bottom: 10px;
+  }
+
   /*
    * iOS Dark Theme
    * -------------------------------------------
