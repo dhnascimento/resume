@@ -98,6 +98,14 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-projects-contrast-rgb: 0, 0, 0;
   --ion-color-projects-shade: #dcb101;
   --ion-color-projects-tint: #fbce1a;
+
+  /** education **/
+  --ion-color-education: #30303a;
+  --ion-color-education-rgb: 48, 48, 58;
+  --ion-color-education-contrast: #ffffff;
+  --ion-color-education-contrast-rgb: 255, 255, 255;
+  --ion-color-education-shade: #2a2a33;
+  --ion-color-education-tint: #45454e;
 }
 
 .ion-color-expertise {
@@ -125,6 +133,15 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-contrast-rgb: var(--ion-color-projects-contrast-rgb);
   --ion-color-shade: var(--ion-color-projects-shade);
   --ion-color-tint: var(--ion-color-projects-tint);
+}
+
+.ion-color-education {
+  --ion-color-base: var(--ion-color-education);
+  --ion-color-base-rgb: var(--ion-color-education-rgb);
+  --ion-color-contrast: var(--ion-color-education-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-education-contrast-rgb);
+  --ion-color-shade: var(--ion-color-education-shade);
+  --ion-color-tint: var(--ion-color-education-tint);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -204,10 +221,6 @@ http://ionicframework.com/docs/theming/ */
     --ion-color-expertise-contrast-rgb: 255, 255, 255;
     --ion-color-expertise-shade: #1e4683;
     --ion-color-expertise-tint: #3862a0;
-  }
-
-  li {
-    margin-bottom: 10px;
   }
 
   /*

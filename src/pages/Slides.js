@@ -9,6 +9,7 @@ import {
   IonIcon,
 } from "@ionic/react";
 import Expertise from "./Slides/Expertise";
+import Education from "./Slides/Education";
 
 // Optional parameters to pass to the swiper instance.
 // See http://idangero.us/swiper/api/ for valid options.
@@ -34,6 +35,13 @@ const paragraph = {
   textAlign: "justify",
   paddingRight: "10px",
   paddingLeft: "10px",
+};
+
+const slideEducation = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexFlow: "column wrap",
 };
 
 const Slides = () => {
@@ -67,27 +75,26 @@ const Slides = () => {
         >
           Projects
         </IonButton>
+        <IonButton
+          color="education"
+          style={buttonSize}
+          onClick={() => selectSlide(3)}
+        >
+          Education
+        </IonButton>
       </div>
       <IonSlides options={slideOpts} ref={singleSlide}>
         <IonSlide>
           <Expertise />
         </IonSlide>
         <IonSlide>
-          <p style={paragraph}>
-            {" "}
-            I have over 9 years of experience in the banking and finance
-            industries. I’ve always enjoyed working in helping people finding
-            the most suitable solutions for their needs. I started learning how
-            to code with data analysis in mind. However, the innate
-            problem-solving nature of it, along with the endless possibilities
-            of what one can accomplish with a programming language, ranging from
-            a groundbreaking app to a simple tool to improve efficiency in a
-            specific task, compelled me to pursue a career change towards a web
-            developer role.
-          </p>
+          <hi>Slide 2</hi>
         </IonSlide>
         <IonSlide>
           <h1>Slide 3</h1>
+        </IonSlide>
+        <IonSlide style={slideEducation}>
+          <Education />
         </IonSlide>
       </IonSlides>
     </div>
