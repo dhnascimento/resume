@@ -7,18 +7,16 @@ import {
   IonLabel,
   IonGrid,
   IonRow,
-  IonCol,
   IonItem,
   IonThumbnail,
   IonCardContent,
   IonTitle,
 } from "@ionic/react";
-import { pin } from "ionicons/icons";
 import "../../theme/slides.css";
 
 const Education = () => {
   const labelStyle = {
-    // fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Montserrat', sans-serif",
     whiteSpace: "normal",
   };
 
@@ -34,6 +32,7 @@ const Education = () => {
   };
 
   const cardStyle = {
+    fontFamily: "'Montserrat', sans-serif",
     width: "275px",
   };
 
@@ -82,7 +81,7 @@ const Education = () => {
         <IonLabel style={labelStyle}>
           <p>BrainStation</p>
           <h3>User Interface Design Certificate</h3>
-          <p>April 2020 - June 2020</p>
+          <p>April - June 2020</p>
         </IonLabel>
       </IonItem>
       <IonItem>
@@ -92,7 +91,7 @@ const Education = () => {
         <IonLabel style={labelStyle}>
           <p>WoodGreen Services</p>
           <h3>English Language Training Program</h3>
-          <p>April 2020 - June 2020</p>
+          <p>April - June 2020</p>
         </IonLabel>
       </IonItem>
     </div>
@@ -106,7 +105,7 @@ const Education = () => {
           <IonCardHeader>
             <IonCardSubtitle>Lighthouse Labs</IonCardSubtitle>
             <IonCardTitle>Web Development Diploma Program</IonCardTitle>
-            <IonCardContent>July 2020 - October 2020</IonCardContent>
+            <IonCardContent>July - October 2020</IonCardContent>
           </IonCardHeader>
         </IonCard>
         <IonCard style={cardStyle}>
@@ -114,17 +113,13 @@ const Education = () => {
           <IonCardHeader>
             <IonCardSubtitle>BrainStation</IonCardSubtitle>
             <IonCardTitle>Data Science Diploma Program</IonCardTitle>
-            <IonCardContent mode="md">
-              October 2019 - December 2019
-            </IonCardContent>
+            <IonCardContent mode="md">October - December 2019</IonCardContent>
           </IonCardHeader>
         </IonCard>
         <IonCard style={cardStyle}>
           <img src="https://media.licdn.com/dms/image/C560BAQF8B9p8hikNZA/company-logo_200_200/0?e=2159024400&v=beta&t=gUL4Qj9wnd-czeu6bsYaFQSG56EHFDUHQd0s42ptQSo"></img>
           <IonCardHeader>
-            <IonCardSubtitle>
-              Catholic University of Brasilia - UCB
-            </IonCardSubtitle>
+            <IonCardSubtitle>Catholic University of Brasilia</IonCardSubtitle>
             <IonCardTitle>Master's Degree in Economics</IonCardTitle>
             <IonCardContent mode="md">
               February 2015 - March 2017

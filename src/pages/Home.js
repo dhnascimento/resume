@@ -1,7 +1,6 @@
 import { IonContent, IonPage, IonGrid, IonRow, IonCol } from "@ionic/react";
 import React from "react";
 import Profile from "./Profile";
-import Description from "./DescriptionFlip";
 import About from "./About";
 import Slides from "./Slides";
 import { useMediaQuery } from "../hooks/useMediaQuery";

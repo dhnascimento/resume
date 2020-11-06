@@ -20,6 +20,7 @@ const About = () => {
   };
 
   const textStyle = {
+    fontFamily: "'Montserrat', sans-serif",
     textAlign: "justify",
     paddingRight: "10px",
     paddingLeft: "10px",
@@ -68,7 +69,7 @@ const About = () => {
   const RegularGrid = (
     <IonRow style={gridStyle}>
       <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
-      <IonCol offset="2 ">{text}</IonCol>
+      <IonCol offset="1 ">{text}</IonCol>
     </IonRow>
   );
 

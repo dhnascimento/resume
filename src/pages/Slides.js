@@ -1,15 +1,8 @@
 import React, { useRef } from "react";
-import {
-  IonLabel,
-  IonList,
-  IonItem,
-  IonSlides,
-  IonSlide,
-  IonButton,
-  IonIcon,
-} from "@ionic/react";
+import { IonSlides, IonSlide, IonButton } from "@ionic/react";
 import Expertise from "./Slides/Expertise";
 import Education from "./Slides/Education";
+import Projects from "./Slides/Projects";
 
 // Optional parameters to pass to the swiper instance.
 // See http://idangero.us/swiper/api/ for valid options.
@@ -91,7 +84,7 @@ const Slides = () => {
           <hi>Slide 2</hi>
         </IonSlide>
         <IonSlide>
-          <h1>Slide 3</h1>
+          <Projects />
         </IonSlide>
         <IonSlide style={slideEducation}>
           <Education />

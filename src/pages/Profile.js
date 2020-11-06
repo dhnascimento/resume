@@ -2,7 +2,6 @@ import { IonImg, IonThumbnail, IonIcon } from "@ionic/react";
 import { logoLinkedin, logoGithub } from "ionicons/icons";
 import React from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
-import Description from "./DescriptionFlip";
 
 const Profile = () => {
   const display = {
