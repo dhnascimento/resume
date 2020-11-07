@@ -18,7 +18,6 @@ const Projects = () => {
   const cardStyle = {
     fontFamily: "'Montserrat', sans-serif",
     width: "300px",
-    height: "430px",
   };
 
   const rowMainStyle = {
