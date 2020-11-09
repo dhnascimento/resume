@@ -8,16 +8,6 @@ import { ReactComponent as Rails } from "./rails.svg";
 
 import { svgSize, rowMainStyle } from "./styles";
 
-// const rowMainStyle = {
-//   alignItems: "center",
-//   justifyContent: "center",
-// };
-
-// const svgSize = {
-//   height: "150px",
-//   width: "150px",
-// };
-
 const BackEnd = () => {
   return (
     <IonRow style={rowMainStyle}>

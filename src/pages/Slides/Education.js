@@ -46,6 +46,12 @@ const Education = () => {
     justifyContent: "center",
   };
 
+  const titleStyle = {
+    // backgroundColor: "#45454e",
+    // color: "#FFFFFF",
+    // width: "100%",
+  };
+
   const otherDegrees = (
     <div>
       <IonItem>
@@ -128,9 +134,9 @@ const Education = () => {
         </IonCard>
       </IonRow>
       <IonRow style={rowOtherStyle}>
-        <IonTitle>Other Degrees</IonTitle>
+        <span style={titleStyle}>Other Degrees</span>
         <IonCard>{otherDegrees}</IonCard>
-        <IonTitle>Certificates</IonTitle>
+        <span style={titleStyle}>Certificates</span>
         <IonCard>{certificates}</IonCard>
       </IonRow>
     </IonGrid>

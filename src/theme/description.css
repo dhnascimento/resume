@@ -1,16 +1,22 @@
 .scene {
   display: inline-block;
-  width: 100%;
-  height: 100%;
-  perspective: 30em;
+  width: 50%;
+  height: 50%;
+  perspective: 50px;
+}
+
+.face1 {
+  line-height: 15em;
+  text-align: center;
+  position: absolute;
 }
 
 .card,
 .front,
 .back {
   position: absolute;
-  height: inherit;
-  width: inherit;
+  height: 50px;
+  width: 100px;
   transition: all 7s;
   transform-style: preserve-3d;
 }
@@ -21,6 +27,7 @@
 
 .back {
   background: violet;
+  height: 50px;
 }
 
 .scene .back {

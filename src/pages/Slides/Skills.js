@@ -25,38 +25,39 @@ const Skills = () => {
   const titleStyle = {
     backgroundColor: "#45454e",
     color: "#FFFFFF",
+    width: "100%",
   };
 
   return (
     <IonGrid fixed={false} style={gridStyle}>
-      <IonRow>
-        <IonTitle style={titleStyle}>Web Front End</IonTitle>
+      <IonRow style={rowMainStyle}>
+        <span style={titleStyle}>Web Front End</span>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <FrontEnd />
       </IonRow>
 
       <IonRow>
-        <IonTitle style={titleStyle}>Web Back End</IonTitle>
+        <span style={titleStyle}>Web Back End</span>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <BackEnd />
       </IonRow>
       <IonRow>
-        <IonTitle style={titleStyle}>Systems and Databases</IonTitle>
+        <span style={titleStyle}>Systems and Databases</span>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <Databases />
       </IonRow>
       <IonRow>
-        <IonTitle style={titleStyle}>Languages</IonTitle>
+        <span style={titleStyle}>Languages</span>
       </IonRow>
 
       <IonRow style={rowMainStyle}>
         <Languages />
       </IonRow>
       <IonRow>
-        <IonTitle style={titleStyle}>Machine Learning Frameworks</IonTitle>
+        <span style={titleStyle}>Machine Learning Frameworks</span>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <ML />
@@ -64,14 +65,14 @@ const Skills = () => {
 
       <IonRow style={rowMainStyle}></IonRow>
       <IonRow>
-        <IonTitle style={titleStyle}>Other</IonTitle>
+        <span style={titleStyle}>Other</span>
       </IonRow>
 
       <IonRow style={rowMainStyle}>
         <Other />
       </IonRow>
       <IonRow>
-        <IonTitle style={titleStyle}>Spoken Languages</IonTitle>
+        <span style={titleStyle}>Spoken Languages</span>
       </IonRow>
 
       <IonRow style={rowMainStyle}>

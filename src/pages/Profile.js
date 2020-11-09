@@ -2,6 +2,7 @@ import { IonImg, IonThumbnail, IonIcon } from "@ionic/react";
 import { logoLinkedin, logoGithub } from "ionicons/icons";
 import React from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+import "../theme/description.css";
 
 const Profile = () => {
   const display = {
@@ -70,6 +71,12 @@ const Profile = () => {
         )}
       >
         <span>Daniel Nascimento</span>
+        {/* <div className="scene">
+          <div className="card">
+            <div className="face1 front">FRONT</div>
+            <div className="face1 back">BACK</div>
+          </div>
+        </div> */}
         <div style={anchorDisplay.container(SMediaQuery)}>
           <a href="http://linkedin.com/in/danielhnascimento" style={anchor}>
             <IonIcon icon={logoLinkedin} />
