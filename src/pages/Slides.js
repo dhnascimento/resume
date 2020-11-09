@@ -3,12 +3,14 @@ import { IonSlides, IonSlide, IonButton } from "@ionic/react";
 import Expertise from "./Slides/Expertise";
 import Education from "./Slides/Education";
 import Projects from "./Slides/Projects";
+import Skills from "./Slides/Skills";
 
 // Optional parameters to pass to the swiper instance.
 // See http://idangero.us/swiper/api/ for valid options.
 const slideOpts = {
   speed: 400,
   height: "100%",
+  autoHeight: true,
   // width: "100%",
 };
 
@@ -35,6 +37,10 @@ const slideEducation = {
   justifyContent: "center",
   alignItems: "center",
   flexFlow: "column wrap",
+};
+
+const slideSkills = {
+  fontFamily: "'Montserrat', sans-serif",
 };
 
 const Slides = () => {
@@ -81,13 +87,13 @@ const Slides = () => {
           <Expertise />
         </IonSlide>
         <IonSlide>
-          <hi>Slide 2</hi>
+          <Skills />
         </IonSlide>
         <IonSlide>
           <Projects />
         </IonSlide>
         <IonSlide style={slideEducation}>
-          <Education />
+          <Education style={slideSkills} />
         </IonSlide>
       </IonSlides>
     </div>
