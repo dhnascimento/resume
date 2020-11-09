@@ -5,33 +5,29 @@ import { ReactComponent as PostgreSQL } from "./postgres.svg";
 import { ReactComponent as MongoDB } from "./mongodb.svg";
 import { ReactComponent as Git } from "./git.svg";
 import { ReactComponent as Github } from "./github.svg";
-
-const rowMainStyle = {
-  alignItems: "center",
-  justifyContent: "center",
-};
+import { svgSize, rowMainStyle } from "./styles";
 
 const Databases = () => {
   return (
     <IonRow style={rowMainStyle}>
       <IonCard>
-        <PostgreSQL height="200px" width="200px" />
+        <PostgreSQL style={svgSize} />
         <IonCardTitle>PostgreSQL</IonCardTitle>
       </IonCard>
       <IonCard>
-        <MySQL height="200px" width="200px" />
+        <MySQL style={svgSize} />
         <IonCardTitle>MySQL</IonCardTitle>
       </IonCard>
       <IonCard>
-        <MongoDB height="200px" width="200px" />
+        <MongoDB style={svgSize} />
         <IonCardTitle>MongoDB</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Git height="200px" width="200px" />
+        <Git style={svgSize} />
         <IonCardTitle>Git</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Github height="200px" width="200px" />
+        <Github style={svgSize} />
         <IonCardTitle>Git</IonCardTitle>
       </IonCard>
     </IonRow>

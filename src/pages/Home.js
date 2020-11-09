@@ -19,7 +19,10 @@ const Home = () => {
     borderStyle: "solid",
     borderWidth: "5px",
     padding: "0px",
-    margin: "10px",
+    marginLeft: "2px",
+    marginRight: "2px",
+    marginTop: "5px",
+    marginBottom: "5px",
   };
 
   const colBorder = {

@@ -3,25 +3,21 @@ import { IonCard, IonCardTitle, IonRow } from "@ionic/react";
 import { ReactComponent as Excel } from "./excel.svg";
 import { ReactComponent as Figma } from "./figma.svg";
 import { ReactComponent as Tableau } from "./tableau.svg";
-
-const rowMainStyle = {
-  alignItems: "center",
-  justifyContent: "center",
-};
+import { svgSize, rowMainStyle } from "./styles";
 
 const Other = () => {
   return (
     <IonRow style={rowMainStyle}>
       <IonCard>
-        <Excel height="200px" width="200px" />
+        <Excel style={svgSize} />
         <IonCardTitle>Excel</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Figma height="200px" width="200px" />
+        <Figma style={svgSize} />
         <IonCardTitle>Figma</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Tableau height="200px" width="200px" />
+        <Tableau style={svgSize} />
         <IonCardTitle>Tableau</IonCardTitle>
       </IonCard>
     </IonRow>

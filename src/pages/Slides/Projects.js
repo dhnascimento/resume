@@ -18,6 +18,10 @@ const Projects = () => {
   const cardStyle = {
     fontFamily: "'Montserrat', sans-serif",
     width: "300px",
+    height: "380px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
   };
 
   const rowMainStyle = {
@@ -39,8 +43,7 @@ const Projects = () => {
             </IonCardSubtitle>
             <IonCardContent>
               An innovative solution for organizing potlucks. It allows users to
-              create their own events, invite guests, who can provide their
-              availability, search for recipes through the Spoonacular API and
+              create their own events, invite guests, search for recipes and
               send messages to other participants.
             </IonCardContent>
           </IonCardHeader>
@@ -76,6 +79,8 @@ const Projects = () => {
             </IonCardContent>
           </IonCardHeader>
         </IonCard>
+      </IonRow>
+      <IonRow style={rowMainStyle}>
         <IonCard style={cardStyle}>
           <a href="https://github.com/dhnascimento/tweeter">
             <img src="https://github.com/dhnascimento/tweeter/raw/master/docs/tweets.png"></img>

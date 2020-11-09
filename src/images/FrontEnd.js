@@ -6,33 +6,29 @@ import { ReactComponent as HTML } from "./html.svg";
 import { ReactComponent as JS } from "./js.svg";
 import { ReactComponent as ReactIcon } from "./react.svg";
 import { ReactComponent as Sass } from "./sass.svg";
-
-const rowMainStyle = {
-  alignItems: "center",
-  justifyContent: "center",
-};
+import { svgSize, rowMainStyle } from "./styles";
 
 const FrontEnd = () => {
   return (
     <IonRow style={rowMainStyle}>
       <IonCard>
-        <HTML height="200px" width="200px" />
+        <HTML style={svgSize} />
         <IonCardTitle>HTML</IonCardTitle>
       </IonCard>
       <IonCard>
-        <CSS height="200px" width="200px" />
+        <CSS style={svgSize} />
         <IonCardTitle>CSS</IonCardTitle>
       </IonCard>
       <IonCard>
-        <ReactIcon height="200px" width="200px" />
+        <ReactIcon style={svgSize} />
         <IonCardTitle>React</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Bootstrap height="200px" width="200px" />
+        <Bootstrap style={svgSize} />
         <IonCardTitle>Bootstrap</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Sass height="200px" width="200px" />
+        <Sass style={svgSize} />
         <IonCardTitle>Sass</IonCardTitle>
       </IonCard>
     </IonRow>

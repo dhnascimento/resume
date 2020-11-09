@@ -3,25 +3,21 @@ import { IonCard, IonCardTitle, IonRow } from "@ionic/react";
 import { ReactComponent as Python } from "./python.svg";
 import { ReactComponent as Ruby } from "./ruby.svg";
 import { ReactComponent as JS } from "./js.svg";
-
-const rowMainStyle = {
-  alignItems: "center",
-  justifyContent: "center",
-};
+import { svgSize, rowMainStyle } from "./styles";
 
 const Languages = () => {
   return (
     <IonRow style={rowMainStyle}>
       <IonCard>
-        <JS height="200px" width="200px" />
+        <JS style={svgSize} />
         <IonCardTitle>JavaScript</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Ruby height="200px" width="200px" />
+        <Ruby style={svgSize} />
         <IonCardTitle>Ruby</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Python height="200px" width="200px" />
+        <Python style={svgSize} />
         <IonCardTitle>Python</IonCardTitle>
       </IonCard>
     </IonRow>

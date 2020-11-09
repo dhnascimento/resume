@@ -1,17 +1,5 @@
 import React from "react";
-import {
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardSubtitle,
-  IonLabel,
-  IonGrid,
-  IonRow,
-  IonItem,
-  IonThumbnail,
-  IonCardContent,
-  IonTitle,
-} from "@ionic/react";
+import { IonGrid, IonRow, IonTitle } from "@ionic/react";
 import "../../theme/slides.css";
 import {
   FrontEnd,
@@ -34,48 +22,56 @@ const Skills = () => {
     fontFamily: "'Montserrat', sans-serif",
   };
 
+  const titleStyle = {
+    backgroundColor: "#45454e",
+    color: "#FFFFFF",
+  };
+
   return (
     <IonGrid fixed={false} style={gridStyle}>
       <IonRow>
-        <IonTitle>Web Front End</IonTitle>
+        <IonTitle style={titleStyle}>Web Front End</IonTitle>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <FrontEnd />
       </IonRow>
 
       <IonRow>
-        <IonTitle>Web Back End</IonTitle>
+        <IonTitle style={titleStyle}>Web Back End</IonTitle>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <BackEnd />
       </IonRow>
       <IonRow>
-        <IonTitle>Systems and Databases</IonTitle>
+        <IonTitle style={titleStyle}>Systems and Databases</IonTitle>
       </IonRow>
       <IonRow style={rowMainStyle}>
         <Databases />
       </IonRow>
       <IonRow>
-        <IonTitle>Languages</IonTitle>
+        <IonTitle style={titleStyle}>Languages</IonTitle>
       </IonRow>
 
       <IonRow style={rowMainStyle}>
         <Languages />
       </IonRow>
       <IonRow>
-        <IonTitle>Machine Learning Frameworks</IonTitle>
+        <IonTitle style={titleStyle}>Machine Learning Frameworks</IonTitle>
+      </IonRow>
+      <IonRow style={rowMainStyle}>
+        <ML />
       </IonRow>
 
       <IonRow style={rowMainStyle}></IonRow>
       <IonRow>
-        <IonTitle>Other</IonTitle>
+        <IonTitle style={titleStyle}>Other</IonTitle>
       </IonRow>
 
       <IonRow style={rowMainStyle}>
         <Other />
       </IonRow>
       <IonRow>
-        <IonTitle>Spoken Languages</IonTitle>
+        <IonTitle style={titleStyle}>Spoken Languages</IonTitle>
       </IonRow>
 
       <IonRow style={rowMainStyle}>
