@@ -10,7 +10,6 @@ import {
   IonItem,
   IonThumbnail,
   IonCardContent,
-  IonTitle,
 } from "@ionic/react";
 import "../../theme/slides.css";
 
@@ -18,17 +17,6 @@ const Education = () => {
   const labelStyle = {
     fontFamily: "'Montserrat', sans-serif",
     whiteSpace: "normal",
-  };
-
-  const headerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    fontWeight: "600",
-  };
-
-  const listStyle = {
-    whiteSpace: "normal",
-    padding: "1rem",
   };
 
   const cardStyle = {
@@ -42,21 +30,27 @@ const Education = () => {
   };
 
   const rowOtherStyle = {
+    alignItems: "center",
     flexDirection: "column",
     justifyContent: "center",
   };
 
   const titleStyle = {
-    // backgroundColor: "#45454e",
-    // color: "#FFFFFF",
-    // width: "100%",
+    fontFamily: "'Kadwa', serif",
+    backgroundColor: "#45454e",
+    color: "#FFFFFF",
+    width: "100%",
   };
 
   const otherDegrees = (
     <div>
+      <IonCardContent style={titleStyle}>Other Degrees</IonCardContent>
       <IonItem>
         <IonThumbnail slot="start">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUtM2FoMmeNdZhP8DvcOptjZK23Lb9DhHXDw&usqp=CAU"></img>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUtM2FoMmeNdZhP8DvcOptjZK23Lb9DhHXDw&usqp=CAU"
+            alt="UCB"
+          ></img>
         </IonThumbnail>
         <IonLabel style={labelStyle}>
           <p>Catholic University of Brasilia - UCB</p>
@@ -66,7 +60,10 @@ const Education = () => {
       </IonItem>
       <IonItem>
         <IonThumbnail slot="start">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Webysther_20160322_-_Logo_UnB_%28sem_texto%29.svg"></img>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Webysther_20160322_-_Logo_UnB_%28sem_texto%29.svg"
+            alt="UNBs"
+          ></img>
         </IonThumbnail>
         <IonLabel style={labelStyle}>
           <p>University of Brasilia - UnB</p>
@@ -79,10 +76,13 @@ const Education = () => {
 
   const certificates = (
     <div>
-      {" "}
+      <IonCardContent style={titleStyle}>Certificates</IonCardContent>
       <IonItem>
         <IonThumbnail slot="start">
-          <img src="https://coursereport-production.imgix.net/uploads/school/logo/62/original/blacksquare-logo.jpg?w=200&h=200"></img>
+          <img
+            src="https://coursereport-production.imgix.net/uploads/school/logo/62/original/blacksquare-logo.jpg?w=200&h=200"
+            alt="BrainStation"
+          ></img>
         </IonThumbnail>
         <IonLabel style={labelStyle}>
           <p>BrainStation</p>
@@ -92,7 +92,10 @@ const Education = () => {
       </IonItem>
       <IonItem>
         <IonThumbnail slot="start">
-          <img src="https://media.glassdoor.com/sqll/482498/woodgreen-community-services-squarelogo-1452077478449.png"></img>
+          <img
+            src="https://media.glassdoor.com/sqll/482498/woodgreen-community-services-squarelogo-1452077478449.png"
+            alt="WoodGreen"
+          ></img>
         </IonThumbnail>
         <IonLabel style={labelStyle}>
           <p>WoodGreen Services</p>
@@ -107,7 +110,10 @@ const Education = () => {
     <IonGrid fixed={false}>
       <IonRow style={rowMainStyle}>
         <IonCard style={cardStyle}>
-          <img src="https://avatars1.githubusercontent.com/u/5753105?s=200&v=4"></img>
+          <img
+            src="https://avatars1.githubusercontent.com/u/5753105?s=200&v=4"
+            alt="LHL"
+          ></img>
           <IonCardHeader>
             <IonCardSubtitle>Lighthouse Labs</IonCardSubtitle>
             <IonCardTitle>Web Development Diploma Program</IonCardTitle>
@@ -115,7 +121,10 @@ const Education = () => {
           </IonCardHeader>
         </IonCard>
         <IonCard style={cardStyle}>
-          <img src="https://coursereport-production.imgix.net/uploads/school/logo/62/original/blacksquare-logo.jpg?w=200&h=200"></img>
+          <img
+            src="https://coursereport-production.imgix.net/uploads/school/logo/62/original/blacksquare-logo.jpg?w=200&h=200"
+            alt="BrainStation"
+          ></img>
           <IonCardHeader>
             <IonCardSubtitle>BrainStation</IonCardSubtitle>
             <IonCardTitle>Data Science Diploma Program</IonCardTitle>
@@ -123,7 +132,10 @@ const Education = () => {
           </IonCardHeader>
         </IonCard>
         <IonCard style={cardStyle}>
-          <img src="https://media.licdn.com/dms/image/C560BAQF8B9p8hikNZA/company-logo_200_200/0?e=2159024400&v=beta&t=gUL4Qj9wnd-czeu6bsYaFQSG56EHFDUHQd0s42ptQSo"></img>
+          <img
+            src="https://media.licdn.com/dms/image/C560BAQF8B9p8hikNZA/company-logo_200_200/0?e=2159024400&v=beta&t=gUL4Qj9wnd-czeu6bsYaFQSG56EHFDUHQd0s42ptQSo"
+            alt="UCB"
+          ></img>
           <IonCardHeader>
             <IonCardSubtitle>Catholic University of Brasilia</IonCardSubtitle>
             <IonCardTitle>Master's Degree in Economics</IonCardTitle>
@@ -134,9 +146,7 @@ const Education = () => {
         </IonCard>
       </IonRow>
       <IonRow style={rowOtherStyle}>
-        <span style={titleStyle}>Other Degrees</span>
         <IonCard>{otherDegrees}</IonCard>
-        <span style={titleStyle}>Certificates</span>
         <IonCard>{certificates}</IonCard>
       </IonRow>
     </IonGrid>

@@ -22,7 +22,10 @@ const Expertise = () => {
     <IonList inset="true" lines="full">
       <IonItem>
         <IonAvatar slot="start">
-          <img src="https://seeklogo.com/images/B/Banco_do_Brasil-logo-6C6B7F5F01-seeklogo.com.png"></img>
+          <img
+            src="https://seeklogo.com/images/B/Banco_do_Brasil-logo-6C6B7F5F01-seeklogo.com.png"
+            alt="BB"
+          ></img>
         </IonAvatar>
         <IonLabel style={labelStyle}>
           <div style={headerStyle}>
@@ -61,7 +64,10 @@ const Expertise = () => {
       </IonItem>
       <IonItem>
         <IonAvatar slot="start">
-          <img src="https://seeklogo.com/images/B/Banco_do_Brasil-logo-6C6B7F5F01-seeklogo.com.png"></img>
+          <img
+            src="https://seeklogo.com/images/B/Banco_do_Brasil-logo-6C6B7F5F01-seeklogo.com.png"
+            alt="BB"
+          ></img>
         </IonAvatar>
         <IonLabel style={labelStyle}>
           <div style={headerStyle}>

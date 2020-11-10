@@ -1,5 +1,5 @@
 import React from "react";
-import { IonGrid, IonRow, IonTitle } from "@ionic/react";
+import { IonGrid, IonRow } from "@ionic/react";
 import "../../theme/slides.css";
 import {
   FrontEnd,
@@ -20,9 +20,11 @@ const Skills = () => {
 
   const gridStyle = {
     fontFamily: "'Montserrat', sans-serif",
+    fontSize: "25px",
   };
 
   const titleStyle = {
+    fontFamily: "'Kadwa', serif",
     backgroundColor: "#45454e",
     color: "#FFFFFF",
     width: "100%",

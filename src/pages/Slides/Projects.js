@@ -4,13 +4,9 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardSubtitle,
-  IonImg,
   IonGrid,
   IonRow,
-  IonItem,
-  IonThumbnail,
   IonCardContent,
-  IonTitle,
 } from "@ionic/react";
 import "../../theme/projects.css";
 

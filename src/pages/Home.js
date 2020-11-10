@@ -19,8 +19,8 @@ const Home = () => {
     borderStyle: "solid",
     borderWidth: "5px",
     padding: "0px",
-    marginLeft: "2px",
-    marginRight: "2px",
+    marginLeft: "1.5px",
+    marginRight: "1.5px",
     marginTop: "5px",
     marginBottom: "5px",
   };

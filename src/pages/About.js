@@ -19,6 +19,19 @@ const About = () => {
     }),
   };
 
+  const titleStyle2 = {
+    container: (SMediaQuery, MobileMediaQuery) => ({
+      fontFamily: "'Kadwa', serif",
+      fontSize: SMediaQuery
+        ? "xx-large"
+        : MobileMediaQuery
+        ? "x-large"
+        : "large",
+      textAlign: "center",
+      backgroundColor: "#dd0100",
+    }),
+  };
+
   const textStyle = {
     fontFamily: "'Montserrat', sans-serif",
     textAlign: "justify",
@@ -38,12 +51,40 @@ const About = () => {
     }),
   };
 
+  const redColumn = {
+    container: (SMediaQuery) => ({
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: "#FFFFFF",
+      backgroundColor: "#dd0100",
+      borderLeft: SMediaQuery ? "5px solid #000000" : "0px solid #000000",
+      borderBottom: SMediaQuery ? "0px solid #000000" : "5px solid #000000",
+      borderTop: "5px solid #000000",
+      marginTop: SMediaQuery ? "0px" : "0px",
+    }),
+  };
+
   const gridStyle = {
     borderColor: "#000000",
+    // height: "500250px",
   };
 
   const gridBorder = {
     padding: "0px",
+  };
+
+  const colBottom = {
+    borderTop: "5px solid #000000",
+  };
+
+  const listStyle = {
+    whiteSpace: "normal",
+    fontFamily: "'Montserrat', sans-serif",
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    alignItems: "flex-start",
   };
 
   const title = (
@@ -52,9 +93,14 @@ const About = () => {
     </div>
   );
 
+  const title2 = (
+    <div style={titleStyle2.container(SMediaQuery, MobileMediaQuery)}>
+      Achievements
+    </div>
+  );
+
   const text = (
     <p style={textStyle}>
-      {" "}
       I have over 9 years of experience in the banking and finance industries.
       I’ve always enjoyed working in helping people finding the most suitable
       solutions for their needs. I started learning how to code with data
@@ -66,10 +112,42 @@ const About = () => {
     </p>
   );
 
+  const text2 = (
+    <ul style={listStyle}>
+      {/* <li>
+        Priced acquisition of loans from other financial institutions,
+        contributing to the increase in the company's market share.
+      </li> */}
+      <li>
+        Led in the automation of the interest rate’s disclosure process
+        resulting in efficiency gains for the company and made the lending
+        process easier for the account managers.
+      </li>
+      <li>
+        Designed price discrimination strategies for mortgages, optimizing the
+        available funding, regulatory capital and maximizing the return on
+        equity.
+      </li>
+      <li>
+        Developed a Machine Learning model to analyze news articles related to
+        soccer managers that had an accuracy of 85%.
+      </li>
+    </ul>
+  );
+
   const RegularGrid = (
     <IonRow style={gridStyle}>
-      <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
-      <IonCol offset="1 ">{text}</IonCol>
+      <IonRow>
+        <IonCol style={yellowColumn.container(SMediaQuery)} size="4">
+          {title}
+        </IonCol>
+        <IonCol>{text}</IonCol>
+      </IonRow>
+      <IonRow style={gridStyle}></IonRow>
+      <IonCol style={colBottom}>{text2}</IonCol>
+      <IonCol style={redColumn.container(SMediaQuery)} size="5">
+        {title2}
+      </IonCol>
     </IonRow>
   );
 
@@ -77,6 +155,8 @@ const About = () => {
     <div>
       <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
       <IonCol style={gridStyle}>{text}</IonCol>
+      <IonCol style={redColumn.container(SMediaQuery)}>{title2}</IonCol>
+      <IonCol>{text2}</IonCol>
     </div>
   );
 
