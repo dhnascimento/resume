@@ -10,6 +10,7 @@ const Expertise = () => {
   const headerStyle = {
     display: "flex",
     justifyContent: "space-between",
+    flexWrap: "wrap",
     fontWeight: "600",
   };
 

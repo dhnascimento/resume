@@ -100,16 +100,22 @@ const About = () => {
   );
 
   const text = (
-    <p style={textStyle}>
-      I have over 9 years of experience in the banking and finance industries.
-      I’ve always enjoyed working in helping people finding the most suitable
-      solutions for their needs. I started learning how to code with data
-      analysis in mind. However, the innate problem-solving nature of it, along
-      with the endless possibilities of what one can accomplish with a
-      programming language, ranging from a groundbreaking app to a simple tool
-      to improve efficiency in a specific task, compelled me to pursue a career
-      change towards a web developer role.
-    </p>
+    <div>
+      <p style={textStyle}>
+        I have over 9 years of experience in the banking and finance industries.
+        I started learning how to code with data analysis in mind, which lead me
+        to improve my skills and learn more about data visualization,
+        manipulation and machine learning. The innate problem-solving nature of
+        coding and the almost endless possibilities of what one can accomplish
+        with it, ranging from a groundbreaking app to a simple tool
+        visualization tool, compelled me to keep on improving my skills and also
+        dive into development.
+      </p>
+      <p style={textStyle}>
+        Do you want to know more about me, my projects or do some networking?
+        Please send me an email or add me on LinkedIn!
+      </p>
+    </div>
   );
 
   const text2 = (
