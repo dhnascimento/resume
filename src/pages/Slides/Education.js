@@ -11,9 +11,12 @@ import {
   IonThumbnail,
   IonCardContent,
 } from "@ionic/react";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import "../../theme/slides.css";
 
 const Education = () => {
+  const MobileMediaQuery = useMediaQuery("(min-width: 575px)");
+
   const labelStyle = {
     fontFamily: "'Montserrat', sans-serif",
     whiteSpace: "normal",
@@ -40,6 +43,12 @@ const Education = () => {
     backgroundColor: "#45454e",
     color: "#FFFFFF",
     width: "100%",
+  };
+
+  const otherCardStyle = {
+    container: (MobileMediaQuery) => ({
+      width: MobileMediaQuery ? "50%" : "75%",
+    }),
   };
 
   const otherDegrees = (
@@ -103,6 +112,21 @@ const Education = () => {
           <p>April - June 2020</p>
         </IonLabel>
       </IonItem>
+      <IonItem>
+        <IonThumbnail slot="start">
+          <a href="https://basno.com/0v135qmi">
+            <img
+              src="https://media-exp1.licdn.com/dms/image/C510BAQFnaGYkNVvCbw/company-logo_100_100/0?e=1613606400&v=beta&t=reRW5zsVpg_u6RF04wxfvMJgRZOkCt5fqZoKMLs6Sa8"
+              alt="CFA"
+            ></img>
+          </a>
+        </IonThumbnail>
+        <IonLabel style={labelStyle}>
+          <p>CFA</p>
+          <h3>Investment Foundations Certificate</h3>
+          <p>September 2019</p>
+        </IonLabel>
+      </IonItem>
     </div>
   );
 
@@ -146,8 +170,12 @@ const Education = () => {
         </IonCard>
       </IonRow>
       <IonRow style={rowOtherStyle}>
-        <IonCard>{otherDegrees}</IonCard>
-        <IonCard>{certificates}</IonCard>
+        <IonCard style={otherCardStyle.container(MobileMediaQuery)}>
+          {otherDegrees}
+        </IonCard>
+        <IonCard style={otherCardStyle.container(MobileMediaQuery)}>
+          {certificates}
+        </IonCard>
       </IonRow>
     </IonGrid>
   );

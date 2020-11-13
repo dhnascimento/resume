@@ -1,5 +1,5 @@
 import { IonImg, IonThumbnail, IonIcon } from "@ionic/react";
-import { logoLinkedin, logoGithub } from "ionicons/icons";
+import { logoLinkedin, logoGithub, mailOpen } from "ionicons/icons";
 import React from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import "../theme/description.css";
@@ -78,11 +78,18 @@ const Profile = () => {
           </div>
         </div> */}
         <div style={anchorDisplay.container(SMediaQuery)}>
-          <a href="http://linkedin.com/in/danielhnascimento" style={anchor}>
+          <a
+            href="http://linkedin.com/in/danielhnascimento"
+            alt="Linkedin"
+            style={anchor}
+          >
             <IonIcon icon={logoLinkedin} />
           </a>
-          <a href="https://github.com/dhnascimento" style={anchor}>
+          <a href="https://github.com/dhnascimento" alt="Github" style={anchor}>
             <IonIcon icon={logoGithub} />
+          </a>
+          <a href="malito:danielhn@gmail.com" alt="Email" style={anchor}>
+            <IonIcon icon={mailOpen} />
           </a>
         </div>
       </div>
