@@ -118,42 +118,14 @@ const About = () => {
     </div>
   );
 
-  const text2 = (
-    <ul style={listStyle}>
-      {/* <li>
-        Priced acquisition of loans from other financial institutions,
-        contributing to the increase in the company's market share.
-      </li> */}
-      <li>
-        Led in the automation of the interest rate’s disclosure process
-        resulting in efficiency gains for the company and made the lending
-        process easier for the account managers.
-      </li>
-      <li>
-        Designed price discrimination strategies for mortgages, optimizing the
-        available funding, regulatory capital and maximizing the return on
-        equity.
-      </li>
-      <li>
-        Developed a Machine Learning model to analyze news articles related to
-        soccer managers that had an accuracy of 85%.
-      </li>
-    </ul>
-  );
-
   const RegularGrid = (
     <IonRow style={gridStyle}>
       <IonRow>
-        <IonCol style={yellowColumn.container(SMediaQuery)} size="4">
+        <IonCol style={yellowColumn.container(SMediaQuery)} size="3">
           {title}
         </IonCol>
         <IonCol>{text}</IonCol>
       </IonRow>
-      <IonRow style={gridStyle}></IonRow>
-      <IonCol style={colBottom}>{text2}</IonCol>
-      <IonCol style={redColumn.container(SMediaQuery)} size="5">
-        {title2}
-      </IonCol>
     </IonRow>
   );
 
@@ -161,8 +133,6 @@ const About = () => {
     <div>
       <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
       <IonCol style={gridStyle}>{text}</IonCol>
-      <IonCol style={redColumn.container(SMediaQuery)}>{title2}</IonCol>
-      <IonCol>{text2}</IonCol>
     </div>
   );
 

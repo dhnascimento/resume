@@ -1,10 +1,19 @@
 import React, { useRef } from "react";
-import { IonSlides, IonSlide, IonButton } from "@ionic/react";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import {
+  IonSlides,
+  IonSlide,
+  IonButton,
+  IonFab,
+  IonFabButton,
+  IonIcon,
+  IonToolbar,
+} from "@ionic/react";
+import { arrowUpCircle } from "ionicons/icons";
 import Expertise from "./Slides/Expertise";
 import Education from "./Slides/Education";
 import Projects from "./Slides/Projects";
 import Skills from "./Slides/Skills";
-import { useMediaQuery } from "../hooks/useMediaQuery";
 
 // Optional parameters to pass to the swiper instance.
 // See http://idangero.us/swiper/api/ for valid options.
@@ -38,8 +47,14 @@ const slideSkills = {
 
 const Slides = () => {
   const singleSlide = useRef(null);
+
   const selectSlide = async (index) => {
     const swipe = await singleSlide.current.getSwiper();
+    singleSlide.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
     swipe.slideTo(index);
   };
 
@@ -47,10 +62,18 @@ const Slides = () => {
 
   const buttonSize = {
     container: (MobileMediaQuery) => ({
-      width: MobileMediaQuery ? "6rem" : "5rem",
-      fontSize: MobileMediaQuery ? "14px" : "12px",
+      width: MobileMediaQuery ? "6.5rem" : "5rem",
+      fontSize: MobileMediaQuery ? "14px" : "11px",
     }),
   };
+
+  const fabButton = (
+    <IonFab vertical="bottom" horizontal="end" slot="fixed">
+      <IonFabButton color="dark">
+        <IonIcon icon={arrowUpCircle}></IonIcon>
+      </IonFabButton>
+    </IonFab>
+  );
 
   return (
     <div style={{ width: "100%" }}>
@@ -81,9 +104,10 @@ const Slides = () => {
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(3)}
         >
-          Expertise
+          Experience
         </IonButton>
       </div>
+
       <IonSlides options={slideOpts} ref={singleSlide}>
         <IonSlide>
           <Skills />

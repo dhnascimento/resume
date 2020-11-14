@@ -32,7 +32,7 @@ const Skills = () => {
 
   return (
     <IonGrid fixed={false} style={gridStyle}>
-      <IonRow style={rowMainStyle}>
+      <IonRow>
         <span style={titleStyle}>Web Front End</span>
       </IonRow>
       <IonRow style={rowMainStyle}>

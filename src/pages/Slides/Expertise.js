@@ -46,11 +46,10 @@ const Expertise = () => {
                 date regulation.
               </li>
               <li>
-                Developed price discrimination strategies for real-estate loans
-                and optimization of the sources and uses of the funding
-                available, resulting in the optimization of regulatory capital
-                allocated to loans, competitive lending rates and maximizing the
-                expected return on equity.
+                Developed price discrimination strategies for mortgages loans
+                and optimization of the funding, resulting in the optimization
+                of available resources, competitive lending rates and
+                improvements in profitability and efficiency.
               </li>
               <li>
                 Evaluated impacts of the IFRS 9 frameworks at the price

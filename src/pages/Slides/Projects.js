@@ -113,7 +113,7 @@ const Projects = () => {
               Management Firings in the EPL Based on News Articles
             </IonCardTitle>
             <IonCardSubtitle>
-              Python Jupyter Noteboke, NLTK, Scikit-Learn
+              Python Jupyter Notebook, NLTK, Scikit-Learn
             </IonCardSubtitle>
             <IonCardContent>
               Supervised machine learning NLP text classification model.

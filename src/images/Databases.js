@@ -3,7 +3,6 @@ import { IonCard, IonCardTitle, IonRow } from "@ionic/react";
 import { ReactComponent as MySQL } from "./mysql.svg";
 import { ReactComponent as PostgreSQL } from "./postgres.svg";
 import { ReactComponent as MongoDB } from "./mongodb.svg";
-import { ReactComponent as Git } from "./git.svg";
 import { ReactComponent as Github } from "./github.svg";
 import { svgSize, rowMainStyle } from "./styles";
 
@@ -23,12 +22,8 @@ const Databases = () => {
         <IonCardTitle>MongoDB</IonCardTitle>
       </IonCard>
       <IonCard>
-        <Git style={svgSize} />
-        <IonCardTitle>Git</IonCardTitle>
-      </IonCard>
-      <IonCard>
         <Github style={svgSize} />
-        <IonCardTitle>Git</IonCardTitle>
+        <IonCardTitle>Github</IonCardTitle>
       </IonCard>
     </IonRow>
   );
