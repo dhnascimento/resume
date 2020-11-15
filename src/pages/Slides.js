@@ -15,43 +15,43 @@ import Education from "./Slides/Education";
 import Projects from "./Slides/Projects";
 import Skills from "./Slides/Skills";
 
-// Optional parameters to pass to the swiper instance.
-// See http://idangero.us/swiper/api/ for valid options.
-const slideOpts = {
-  speed: 400,
-  height: "100%",
-  autoHeight: true,
-  // width: "100%",
-};
-
-const buttons = {
-  display: "flex",
-  justifyContent: "center",
-  borderColor: "#000000",
-  borderTop: "5px solid",
-};
-
-const slideEducation = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexFlow: "column wrap",
-  fontFamily: "'Montserrat', sans-serif",
-  fontSize: "25px",
-};
-
-const slideSkills = {
-  fontFamily: "'Montserrat', sans-serif",
-  fontSize: "25px",
-};
-
-const slidesMain = {
-  animation: animations.fadeInUp,
-  animationDuration: "2s",
-  width: "100%",
-};
-
 const Slides = () => {
+  // Optional parameters to pass to the swiper instance.
+  // See http://idangero.us/swiper/api/ for valid options.
+  const slideOpts = {
+    speed: 400,
+    height: "100%",
+    autoHeight: true,
+    // width: "100%",
+  };
+
+  const buttons = {
+    display: "flex",
+    justifyContent: "center",
+    borderColor: "#000000",
+    borderTop: "5px solid",
+  };
+
+  const slideEducation = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexFlow: "column wrap",
+    fontFamily: "'Montserrat', sans-serif",
+    fontSize: "25px",
+  };
+
+  const slideSkills = {
+    fontFamily: "'Montserrat', sans-serif",
+    fontSize: "25px",
+  };
+
+  const slidesMain = {
+    animation: animations.fadeInUp,
+    animationDuration: "2s",
+    width: "100%",
+  };
+
   const singleSlide = useRef(null);
 
   const selectSlide = async (index) => {
