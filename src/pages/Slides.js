@@ -9,7 +9,7 @@ import {
   IonIcon,
   IonToolbar,
 } from "@ionic/react";
-import { arrowUpCircle } from "ionicons/icons";
+import { animations } from "react-animation";
 import Expertise from "./Slides/Expertise";
 import Education from "./Slides/Education";
 import Projects from "./Slides/Projects";
@@ -45,6 +45,12 @@ const slideSkills = {
   fontSize: "25px",
 };
 
+const slidesMain = {
+  animation: animations.fadeInUp,
+  animationDuration: "2s",
+  width: "100%",
+};
+
 const Slides = () => {
   const singleSlide = useRef(null);
 
@@ -67,16 +73,8 @@ const Slides = () => {
     }),
   };
 
-  const fabButton = (
-    <IonFab vertical="bottom" horizontal="end" slot="fixed">
-      <IonFabButton color="dark">
-        <IonIcon icon={arrowUpCircle}></IonIcon>
-      </IonFabButton>
-    </IonFab>
-  );
-
   return (
-    <div style={{ width: "100%" }}>
+    <div style={slidesMain}>
       <div style={buttons}>
         <IonButton
           color="skills"

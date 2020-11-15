@@ -1,11 +1,14 @@
+import React from "react";
 import { IonImg, IonThumbnail, IonIcon } from "@ionic/react";
 import { logoLinkedin, logoGithub, mailOpen } from "ionicons/icons";
-import React from "react";
+import { animations } from "react-animation";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import "../theme/description.css";
 
 const Profile = () => {
   const display = {
+    animation: animations.fadeIn,
+    animationDuration: "3.5s",
     display: "flex",
     justifyContent: "space-between",
     backgroundColor: "#225095",

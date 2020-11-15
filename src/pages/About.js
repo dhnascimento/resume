@@ -1,5 +1,6 @@
-import { IonGrid, IonRow, IonCol } from "@ionic/react";
 import React from "react";
+import { IonGrid, IonRow, IonCol } from "@ionic/react";
+import { animations } from "react-animation";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const About = () => {
@@ -16,19 +17,8 @@ const About = () => {
         : "large",
       textAlign: "center",
       backgroundColor: "#fac901",
-    }),
-  };
-
-  const titleStyle2 = {
-    container: (SMediaQuery, MobileMediaQuery) => ({
-      fontFamily: "'Kadwa', serif",
-      fontSize: SMediaQuery
-        ? "xx-large"
-        : MobileMediaQuery
-        ? "x-large"
-        : "large",
-      textAlign: "center",
-      backgroundColor: "#dd0100",
+      animation: animations.popIn,
+      animationDuration: "5s",
     }),
   };
 
@@ -37,6 +27,8 @@ const About = () => {
     textAlign: "justify",
     paddingRight: "10px",
     paddingLeft: "10px",
+    animation: animations.popIn,
+    animationDuration: "4s",
   };
 
   const yellowColumn = {
@@ -51,51 +43,17 @@ const About = () => {
     }),
   };
 
-  const redColumn = {
-    container: (SMediaQuery) => ({
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: "#FFFFFF",
-      backgroundColor: "#dd0100",
-      borderLeft: SMediaQuery ? "5px solid #000000" : "0px solid #000000",
-      borderBottom: SMediaQuery ? "0px solid #000000" : "5px solid #000000",
-      borderTop: "5px solid #000000",
-      marginTop: SMediaQuery ? "0px" : "0px",
-    }),
-  };
-
   const gridStyle = {
     borderColor: "#000000",
-    // height: "500250px",
   };
 
   const gridBorder = {
     padding: "0px",
   };
 
-  const colBottom = {
-    borderTop: "5px solid #000000",
-  };
-
-  const listStyle = {
-    whiteSpace: "normal",
-    fontFamily: "'Montserrat', sans-serif",
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "column",
-    alignItems: "flex-start",
-  };
-
   const title = (
     <div style={titleStyle.container(SMediaQuery, MobileMediaQuery)}>
       About me
-    </div>
-  );
-
-  const title2 = (
-    <div style={titleStyle2.container(SMediaQuery, MobileMediaQuery)}>
-      Achievements
     </div>
   );
 
@@ -121,7 +79,7 @@ const About = () => {
   const RegularGrid = (
     <IonRow style={gridStyle}>
       <IonRow>
-        <IonCol style={yellowColumn.container(SMediaQuery)} size="3">
+        <IonCol style={yellowColumn.container(SMediaQuery)} size="3 ">
           {title}
         </IonCol>
         <IonCol>{text}</IonCol>

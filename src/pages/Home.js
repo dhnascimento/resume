@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import {
   IonContent,
@@ -9,8 +9,8 @@ import {
   IonFab,
   IonFabButton,
   IonIcon,
-  IonToolbar,
 } from "@ionic/react";
+import { animations } from "react-animation";
 import { arrowUpCircle } from "ionicons/icons";
 import Profile from "./Profile";
 import About from "./About";
@@ -46,7 +46,14 @@ const Home = () => {
     borderBottom: "5px solid",
   };
 
+  const buttonStyle = {
+    paddingRight: "11px",
+    animation: animations.fadeIn,
+    animationDuration: "4s",
+  };
+
   const topRef = useRef(null);
+
   const focusButtons = () => {
     topRef.current.scrollIntoView({
       behavior: "smooth",
@@ -55,37 +62,12 @@ const Home = () => {
   };
 
   const fabButton = (
-    <IonFab
-      vertical="bottom"
-      horizontal="end"
-      slot="fixed"
-      style={{ "padding-right": "11px" }}
-    >
+    <IonFab vertical="bottom" horizontal="end" slot="fixed" style={buttonStyle}>
       <IonFabButton color="dark" onClick={() => focusButtons()}>
         <IonIcon icon={arrowUpCircle}></IonIcon>
       </IonFabButton>
     </IonFab>
   );
-
-  const [scroll, setScroll] = useState("");
-
-  const handleScroll = () => {
-    const positionX = window.pageXOffset;
-    const positionY = window.pageYOffset;
-    console.log(positionX);
-    console.log(positionY);
-    setScroll(positionY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    console.log(scroll);
-    console.log(handleScroll());
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 
   return (
     <IonPage>
