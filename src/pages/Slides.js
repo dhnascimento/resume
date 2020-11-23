@@ -1,14 +1,6 @@
 import React, { useRef } from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
-import {
-  IonSlides,
-  IonSlide,
-  IonButton,
-  IonFab,
-  IonFabButton,
-  IonIcon,
-  IonToolbar,
-} from "@ionic/react";
+import { IonSlides, IonSlide, IonButton } from "@ionic/react";
 import { animations } from "react-animation";
 import Expertise from "./Slides/Expertise";
 import Education from "./Slides/Education";
