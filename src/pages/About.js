@@ -37,14 +37,14 @@ const About = () => {
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "#fac901",
-      borderRight: SMediaQuery ? "5px solid #000000" : "0px solid #000000",
-      borderBottom: SMediaQuery ? "0px solid #000000" : "5px solid #000000",
+      borderRight: SMediaQuery ? "5px" : "0px",
+      borderBottom: SMediaQuery ? "0px" : "5px",
       marginTop: SMediaQuery ? "0px" : "0px",
     }),
   };
 
   const gridStyle = {
-    borderColor: "#000000",
+    // borderColor: "#000000",
   };
 
   const gridBorder = {

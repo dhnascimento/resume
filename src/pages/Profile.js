@@ -1,9 +1,9 @@
 import React from "react";
-import { IonImg, IonThumbnail, IonIcon } from "@ionic/react";
-import { logoLinkedin, logoGithub, mailOpen } from "ionicons/icons";
+import { IonThumbnail, IonButton } from "@ionic/react";
 import { animations } from "react-animation";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import "../theme/description.css";
+import { ReactComponent as RectangleBack } from "../images/BackgroundPhoto.svg";
 
 const Profile = () => {
   const display = {
@@ -11,9 +11,8 @@ const Profile = () => {
     animationDuration: "3.5s",
     display: "flex",
     justifyContent: "space-between",
-    backgroundColor: "#225095",
     height: "81.5%",
-    color: "#FFFFFF",
+    color: "#333333",
   };
 
   const LMediaQuery = useMediaQuery("(min-width: 1551px)");
@@ -40,31 +39,8 @@ const Profile = () => {
     }),
   };
 
-  const anchor = {
-    color: "#FFFFFF",
-    display: "flex",
-    alignItems: "flex-end",
-  };
-
-  const anchorDisplay = {
-    container: (SFontSize) => ({
-      display: "flex",
-      flexDirection: "row-reverse",
-      fontSize: SMediaQuery ? "3rem" : "1.2rem",
-    }),
-  };
-
   return (
     <div style={display}>
-      <IonThumbnail
-        style={{
-          height: "100%",
-          width: "25%",
-          "border-right": "5px solid #000000",
-        }}
-      >
-        <IonImg src={"https://i.imgur.com/lq1p6Ll.png?1"} />
-      </IonThumbnail>
       <div
         style={mystyles.container(
           LMediaQuery,
@@ -73,29 +49,29 @@ const Profile = () => {
           MobileMediaQuery
         )}
       >
-        <span>Daniel Nascimento</span>
-        {/* <div className="scene">
-          <div className="card">
-            <div className="face1 front">FRONT</div>
-            <div className="face1 back">BACK</div>
-          </div>
-        </div> */}
-        <div style={anchorDisplay.container(SMediaQuery)}>
-          <a
-            href="http://linkedin.com/in/danielhnascimento"
-            alt="Linkedin"
-            style={anchor}
-          >
-            <IonIcon icon={logoLinkedin} />
-          </a>
-          <a href="https://github.com/dhnascimento" alt="Github" style={anchor}>
-            <IonIcon icon={logoGithub} />
-          </a>
-          <a href="malito:danielhn@gmail.com" alt="Email" style={anchor}>
-            <IonIcon icon={mailOpen} />
-          </a>
+        <div>
+          <h1>Hi! I'm Daniel</h1>
+          <h1>Great to see you!</h1>
+          <h3>
+            in coulis rerum est laborum et quale sit aut odit aut officis
+            debitis aut fugit, .....
+          </h3>
         </div>
       </div>
+      <IonThumbnail
+        style={{
+          height: "100%",
+          width: "100%",
+          "border-right": "5px",
+        }}
+      >
+        <RectangleBack
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </IonThumbnail>
     </div>
   );
 };

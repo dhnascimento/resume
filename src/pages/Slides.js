@@ -20,8 +20,7 @@ const Slides = () => {
   const buttons = {
     display: "flex",
     justifyContent: "center",
-    borderColor: "#000000",
-    borderTop: "5px solid",
+    borderTop: "5px",
   };
 
   const slideEducation = {

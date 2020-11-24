@@ -12,6 +12,7 @@ import {
 } from "@ionic/react";
 import { animations } from "react-animation";
 import { arrowUpCircle } from "ionicons/icons";
+import TopNav from "./TopNav";
 import Profile from "./Profile";
 import About from "./About";
 import Slides from "./Slides";
@@ -26,8 +27,6 @@ const Home = () => {
   };
 
   const gridBorder = {
-    borderColor: "#000000",
-    borderStyle: "solid",
     borderWidth: "5px",
     padding: "0px",
     marginLeft: "1.5px",
@@ -37,13 +36,21 @@ const Home = () => {
   };
 
   const colBorder = {
-    padding: "0px",
+    padding: "30px",
+    width: "90%",
   };
 
   const rowBorder = {
     height: "19vw",
-    borderColor: "#000000",
-    borderBottom: "5px solid",
+    borderBottom: "5px",
+  };
+
+  const rowNav = {
+    height: "5vw",
+    borderBottom: "5px",
+    display: "flex",
+    flexDirection: "column",
+    padding: "10x",
   };
 
   const buttonStyle = {
@@ -74,17 +81,20 @@ const Home = () => {
       <IonContent>
         {fabButton}
         <IonGrid fixed={false} style={gridBorder} ref={topRef}>
+          <IonRow style={rowNav}>
+            <TopNav />
+          </IonRow>
           <IonRow style={rowBorder}>
             <IonCol style={colBorder}>
               <Profile />
             </IonCol>
           </IonRow>
-          <IonRow style={rowStyle.container(MobileMediaQuery)}>
+          {/* <IonRow style={rowStyle.container(MobileMediaQuery)}>
             <About />
           </IonRow>
           <IonRow>
             <Slides />
-          </IonRow>
+          </IonRow> */}
         </IonGrid>
       </IonContent>
     </IonPage>
