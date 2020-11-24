@@ -14,7 +14,6 @@ import { animations } from "react-animation";
 import { arrowUpCircle } from "ionicons/icons";
 import TopNav from "./TopNav";
 import Profile from "./Profile";
-import About from "./About";
 import Slides from "./Slides";
 
 const Home = () => {
@@ -44,7 +43,10 @@ const Home = () => {
   };
 
   const rowBorder = {
-    height: "31vw",
+    container: (MobileMediaQuery) => ({
+      height: "31vw",
+      marginTop: MobileMediaQuery ? "" : "20px",
+    }),
   };
 
   const rowNav = {
@@ -86,14 +88,14 @@ const Home = () => {
           <IonRow style={rowNav}>
             <TopNav />
           </IonRow>
-          <IonRow style={rowBorder}>
+          <IonRow style={rowBorder.container(MobileMediaQuery)}>
             <IonCol style={colBorder}>
               <Profile />
             </IonCol>
           </IonRow>
-          {/* <IonRow>
+          <IonRow>
             <Slides />
-          </IonRow> */}
+          </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>

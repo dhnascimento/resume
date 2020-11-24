@@ -1,7 +1,7 @@
 import React from "react";
 import { IonGrid, IonRow, IonCol } from "@ionic/react";
 import { animations } from "react-animation";
-import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const About = () => {
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
@@ -79,9 +79,6 @@ const About = () => {
   const RegularGrid = (
     <IonRow style={gridStyle}>
       <IonRow>
-        <IonCol style={yellowColumn.container(SMediaQuery)} size="3 ">
-          {title}
-        </IonCol>
         <IonCol>{text}</IonCol>
       </IonRow>
     </IonRow>
@@ -89,7 +86,6 @@ const About = () => {
 
   const SmallGrid = (
     <div>
-      <IonCol style={yellowColumn.container(SMediaQuery)}>{title}</IonCol>
       <IonCol style={gridStyle}>{text}</IonCol>
     </div>
   );
