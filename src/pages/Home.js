@@ -36,13 +36,15 @@ const Home = () => {
   };
 
   const colBorder = {
-    padding: "30px",
+    paddingTop: "30px",
+    paddingBottom: "30px",
+    paddingLeft: "50px",
+    paddingRight: "50px",
     width: "90%",
   };
 
   const rowBorder = {
-    height: "19vw",
-    borderBottom: "5px",
+    height: "31vw",
   };
 
   const rowNav = {
@@ -89,10 +91,7 @@ const Home = () => {
               <Profile />
             </IonCol>
           </IonRow>
-          {/* <IonRow style={rowStyle.container(MobileMediaQuery)}>
-            <About />
-          </IonRow>
-          <IonRow>
+          {/* <IonRow>
             <Slides />
           </IonRow> */}
         </IonGrid>

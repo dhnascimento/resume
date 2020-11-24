@@ -7,26 +7,30 @@ const TopNav = () => {
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
 
   const anchor = {
-    color: "#000000",
+    color: "#00A7AE",
     display: "flex",
     alignItems: "flex-end",
   };
 
   const anchorDisplay = {
     container: (SFontSize) => ({
+      color: "#00A7AE",
       display: "flex",
       flexDirection: "row",
-      fontSize: SMediaQuery ? "3rem" : "1.2rem",
+      fontSize: SMediaQuery ? "2.5rem" : "1.2rem",
       alignItems: "center",
       width: "100%",
       justifyContent: "space-between",
-      padding: "30px",
+      paddingTop: "30px",
+      paddingBottom: "30px",
+      paddingLeft: "50px",
+      paddingRight: "50px",
     }),
   };
 
   return (
     <div style={anchorDisplay.container(SMediaQuery)}>
-      <span>Daniel Nascimento</span>
+      <span>DANIEL NASCIMENTO</span>
       <div style={{ display: "flex" }}>
         <a
           href="http://linkedin.com/in/danielhnascimento"
