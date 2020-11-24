@@ -11,7 +11,7 @@ const Profile = () => {
     animationDuration: "3.5s",
     display: "flex",
     justifyContent: "space-between",
-    height: "81.5%",
+    height: "84.5%",
     color: "#333333",
   };
 
@@ -35,7 +35,35 @@ const Profile = () => {
       paddingRight: "1rem",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "space-around",
+      justifyContent: "start",
+    }),
+  };
+
+  const h1Style = {
+    container: (LMediaQuery, MMediaQuery, SMediaQuery, MobileMediaQuery) => ({
+      fontSize: LMediaQuery
+        ? "6rem"
+        : MMediaQuery
+        ? "4.5rem"
+        : SMediaQuery
+        ? "3.5rem"
+        : MobileMediaQuery
+        ? "1.5rem"
+        : "1.0rem",
+    }),
+  };
+
+  const h3Style = {
+    container: (LMediaQuery, MMediaQuery, SMediaQuery, MobileMediaQuery) => ({
+      fontSize: LMediaQuery
+        ? "1.5rem"
+        : MMediaQuery
+        ? "3rem"
+        : SMediaQuery
+        ? "2rem"
+        : MobileMediaQuery
+        ? "1.0rem"
+        : "0.7rem",
     }),
   };
 
@@ -49,29 +77,38 @@ const Profile = () => {
           MobileMediaQuery
         )}
       >
-        <div>
-          <h1>Hi! I'm Daniel</h1>
-          <h1>Great to see you!</h1>
-          <h3>
-            in coulis rerum est laborum et quale sit aut odit aut officis
-            debitis aut fugit, .....
-          </h3>
-        </div>
+        <h1
+          style={h1Style.container(
+            LMediaQuery,
+            MMediaQuery,
+            SMediaQuery,
+            MobileMediaQuery
+          )}
+        >
+          Hi! I'm <span style={{ color: "#00A7AE" }}>Daniel</span>. <br></br>{" "}
+          Great to see you!
+        </h1>
+        <h3
+          style={h3Style.container(
+            LMediaQuery,
+            MMediaQuery,
+            SMediaQuery,
+            MobileMediaQuery
+          )}
+        >
+          in coulis rerum est laborum et quale sit aut odit aut officis debitis
+          aut fugit, .....
+        </h3>
+        <IonButton style={{ width: "25%", color: "#FFFFFF" }}>
+          DOWNLOAD CV
+        </IonButton>
       </div>
-      <IonThumbnail
+
+      <RectangleBack
         style={{
-          height: "100%",
-          width: "100%",
-          "border-right": "5px",
+          alignSelf: "center",
         }}
-      >
-        <RectangleBack
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        />
-      </IonThumbnail>
+      />
     </div>
   );
 };
