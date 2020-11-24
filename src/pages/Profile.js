@@ -6,19 +6,21 @@ import "../theme/description.css";
 import { ReactComponent as RectangleBack } from "../images/BackgroundPhoto.svg";
 
 const Profile = () => {
-  const display = {
-    animation: animations.fadeIn,
-    animationDuration: "3.5s",
-    display: "flex",
-    justifyContent: "space-between",
-    height: "84.5%",
-    color: "#333333",
-  };
-
   const LMediaQuery = useMediaQuery("(min-width: 1551px)");
   const MMediaQuery = useMediaQuery("(min-width: 1201px)");
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
   const MobileMediaQuery = useMediaQuery("(min-width: 575px)");
+
+  const display = {
+    container: (MobileMediaQuery) => ({
+      animation: animations.fadeIn,
+      animationDuration: "3.5s",
+      display: "flex",
+      justifyContent: "space-between",
+      height: MobileMediaQuery ? "84.5%" : "25.5%",
+      color: "#333333",
+    }),
+  };
 
   const mystyles = {
     container: (LMediaQuery, MMediaQuery, SMediaQuery, MobileMediaQuery) => ({
@@ -68,7 +70,7 @@ const Profile = () => {
   };
 
   return (
-    <div style={display}>
+    <div style={display.container(MobileMediaQuery)}>
       <div
         style={mystyles.container(
           LMediaQuery,
@@ -99,7 +101,15 @@ const Profile = () => {
           in coulis rerum est laborum et quale sit aut odit aut officis debitis
           aut fugit, .....
         </h3>
-        <IonButton style={{ width: "25%", color: "#FFFFFF" }}>
+        <IonButton
+          style={{
+            width: MobileMediaQuery ? "25%" : "90%",
+            height: MobileMediaQuery ? "" : "25px",
+            color: "#FFFFFF",
+            fontWeight: "bold",
+            fontSize: MobileMediaQuery ? "1rem" : "0.5rem",
+          }}
+        >
           DOWNLOAD CV
         </IonButton>
       </div>

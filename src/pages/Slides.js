@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { IonSlides, IonSlide, IonButton } from "@ionic/react";
 import { animations } from "react-animation";
+import About from "./Slides/About";
 import Expertise from "./Slides/Expertise";
 import Education from "./Slides/Education";
 import Projects from "./Slides/Projects";
@@ -72,32 +73,42 @@ const Slides = () => {
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(0)}
         >
+          About
+        </IonButton>
+        <IonButton
+          color="skills"
+          style={buttonSize.container(MobileMediaQuery)}
+          onClick={() => selectSlide(1)}
+        >
           Skills
         </IonButton>
         <IonButton
           color="projects"
           style={buttonSize.container(MobileMediaQuery)}
-          onClick={() => selectSlide(1)}
+          onClick={() => selectSlide(2)}
         >
           Projects
         </IonButton>
         <IonButton
           color="education"
           style={buttonSize.container(MobileMediaQuery)}
-          onClick={() => selectSlide(2)}
+          onClick={() => selectSlide(3)}
         >
           Education
         </IonButton>
         <IonButton
           color="expertise"
           style={buttonSize.container(MobileMediaQuery)}
-          onClick={() => selectSlide(3)}
+          onClick={() => selectSlide(4)}
         >
           Experience
         </IonButton>
       </div>
 
       <IonSlides options={slideOpts} ref={singleSlide}>
+        <IonSlide>
+          <About />
+        </IonSlide>
         <IonSlide>
           <Skills />
         </IonSlide>
