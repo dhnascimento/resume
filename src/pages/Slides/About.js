@@ -19,6 +19,7 @@ const About = () => {
       backgroundColor: "#fac901",
       animation: animations.popIn,
       animationDuration: "5s",
+      height: "500px",
     }),
   };
 
@@ -51,23 +52,19 @@ const About = () => {
     padding: "0px",
   };
 
-  const title = (
-    <div style={titleStyle.container(SMediaQuery, MobileMediaQuery)}>
-      About me
-    </div>
-  );
-
   const text = (
     <div>
       <p style={textStyle}>
         I have over 9 years of experience in the banking and finance industries.
         I started learning how to code with data analysis in mind, which lead me
         to improve my skills and learn more about data visualization,
-        manipulation and machine learning. The innate problem-solving nature of
-        coding and the almost endless possibilities of what one can accomplish
-        with it, ranging from a groundbreaking app to a simple tool
-        visualization tool, compelled me to keep on improving my skills and also
-        dive into development.
+        manipulation and machine learning.
+      </p>
+      <p style={textStyle}>
+        The innate problem-solving nature of coding and the almost endless
+        possibilities of what one can accomplish with it, ranging from a
+        groundbreaking app to a simple tool visualization tool, compelled me to
+        keep on improving my skills and also dive into development.
       </p>
       <p style={textStyle}>
         Do you want to know more about me, my projects or do some networking?
@@ -91,7 +88,8 @@ const About = () => {
   );
 
   return (
-    <div>
+    <div style={titleStyle}>
+      <h2>About me</h2>
       <IonGrid fixed={false} style={gridBorder}>
         {SMediaQuery ? RegularGrid : SmallGrid}
       </IonGrid>
