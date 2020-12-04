@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  IonButton,
   IonCard,
   IonCardHeader,
   IonCardTitle,
@@ -10,7 +9,7 @@ import {
   IonCardContent,
   IonIcon,
 } from "@ionic/react";
-import { logoGithub, globe } from "ionicons/icons";
+import { logoGithub, logoFigma, globe, logoTableau } from "ionicons/icons";
 import "../../theme/projects.css";
 
 const Projects = () => {
@@ -55,7 +54,10 @@ const Projects = () => {
     <IonGrid fixed={false}>
       <IonRow style={rowMainStyle}>
         <IonCard style={cardStyle}>
-          <img src="https://github.com/barbmich/luckypot/raw/master/app/doc/Dashboard.png"></img>
+          <img
+            src="https://github.com/barbmich/luckypot/raw/master/app/doc/Dashboard.png"
+            alt="Luckypot"
+          ></img>
           <IonCardHeader style={cardHeader}>
             <IonCardTitle>Luckypot</IonCardTitle>
             <IonCardSubtitle>
@@ -78,7 +80,10 @@ const Projects = () => {
         </IonCard>
 
         <IonCard style={cardStyle}>
-          <img src="https://github.com/dhnascimento/scheduler/raw/master/docs/scheduler2.png"></img>
+          <img
+            src="https://github.com/dhnascimento/scheduler/raw/master/docs/scheduler2.png"
+            alt="Interview Scheduler"
+          ></img>
           <IonCardHeader style={cardHeader}>
             <IonCardTitle>Interview Scheduler</IonCardTitle>
             <IonCardSubtitle>
@@ -97,7 +102,10 @@ const Projects = () => {
         </IonCard>
 
         <IonCard style={cardStyle}>
-          <img src="https://github.com/dcoughlin12/buyandsell/raw/master/doc/goodbuy1.png"></img>
+          <img
+            src="https://github.com/dcoughlin12/buyandsell/raw/master/doc/goodbuy1.png"
+            alt="GoodBuy"
+          ></img>
           <IonCardHeader style={cardHeader}>
             <IonCardTitle>GoodBuy</IonCardTitle>
             <IonCardSubtitle>
@@ -121,7 +129,10 @@ const Projects = () => {
 
       <IonRow style={rowMainStyle}>
         <IonCard style={cardStyle}>
-          <img src="https://github.com/dhnascimento/tweeter/raw/master/docs/tweets.png"></img>
+          <img
+            src="https://github.com/dhnascimento/tweeter/raw/master/docs/tweets.png"
+            alt="Tweeter"
+          ></img>
           <IonCardHeader>
             <IonCardTitle>Tweeter</IonCardTitle>
             <IonCardSubtitle>
@@ -137,7 +148,10 @@ const Projects = () => {
         </IonCard>
 
         <IonCard style={cardStyle}>
-          <img src="https://github.com/dhnascimento/tinyapp/raw/master/docs/url1.png"></img>
+          <img
+            src="https://github.com/dhnascimento/tinyapp/raw/master/docs/url1.png"
+            alt="TinyApp"
+          ></img>
           <IonCardHeader>
             <IonCardTitle>TinyApp</IonCardTitle>
             <IonCardSubtitle>
@@ -156,12 +170,12 @@ const Projects = () => {
         </IonCard>
 
         <IonCard style={cardStyle}>
-          <img src="https://i.imgur.com/CLNblhK.png"></img>
+          <img src="https://i.imgur.com/CLNblhK.png" alt="Will be Fired?"></img>
           <IonCardHeader>
-            <IonCardTitle>
-              Management Firings in the EPL Based on News Articles
-            </IonCardTitle>
-            <IonCardSubtitle>Python, NLTK, Scikit-Learn</IonCardSubtitle>
+            <IonCardTitle>Will the Manager be Fired?</IonCardTitle>
+            <IonCardSubtitle>
+              Python, Jupyter Notebook, NLTK, Scikit-Learn
+            </IonCardSubtitle>
             <IonCardContent>
               Supervised machine learning NLP text classification model.
             </IonCardContent>
@@ -175,6 +189,53 @@ const Projects = () => {
             </a>
             <a style={anchor} href="https://willbefired.herokuapp.com/">
               <IonIcon icon={globe} />
+            </a>
+          </div>
+        </IonCard>
+      </IonRow>
+      <IonRow style={rowMainStyle}>
+        <IonCard style={cardStyle}>
+          <img src="https://i.imgur.com/BKqiSFd.png" alt="Scattergories"></img>
+          <IonCardHeader>
+            <IonCardTitle>Scattergories</IonCardTitle>
+            <IonCardSubtitle>Figma</IonCardSubtitle>
+            <IonCardContent>
+              Re-Design of{" "}
+              <a href="https://scattergoriesonline.net/">Scattergories.net</a>.
+            </IonCardContent>
+          </IonCardHeader>
+          <div style={icons}>
+            <a
+              style={anchor}
+              href="https://www.figma.com/proto/omfpl9ZmN574LdIwaxJMoP/Scattergories_05_27?node-id=151%3A2883&scaling=min-zoom"
+            >
+              <IonIcon icon={logoFigma} />
+            </a>
+          </div>
+        </IonCard>
+        <IonCard style={cardStyle}>
+          <img
+            style={{ height: "39%" }}
+            src="https://i.imgur.com/BBuWakK.png"
+            alt="Average Attendances"
+          ></img>
+          <IonCardHeader>
+            <IonCardTitle>Average Attendences in Football Leagues</IonCardTitle>
+            <IonCardSubtitle>Tableau</IonCardSubtitle>
+            <IonCardContent>
+              Interactive map visualization made with data from
+              <a href="http://www.european-football-statistics.co.uk/attn.htm">
+                European Football Statistics
+              </a>
+              .
+            </IonCardContent>
+          </IonCardHeader>
+          <div style={icons}>
+            <a
+              style={anchor}
+              href="https://public.tableau.com/profile/daniel.h.nascimento#!/vizhome/AverageAttendencesinEuropeanFootballLeagues201718/AverageAttendencesinEurope-201718"
+            >
+              <IonIcon icon={logoTableau} />
             </a>
           </div>
         </IonCard>
