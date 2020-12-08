@@ -16,7 +16,7 @@ const About = () => {
         ? "x-large"
         : "large",
       textAlign: "center",
-      backgroundColor: "#fac901",
+      backgroundColor: "#979797",
       animation: animations.popIn,
       animationDuration: "5s",
       height: "500px",

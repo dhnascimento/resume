@@ -32,6 +32,7 @@ const Projects = () => {
   const rowMainStyle = {
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#D8D8D8",
   };
 
   const cardContent = {

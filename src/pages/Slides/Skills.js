@@ -21,12 +21,14 @@ const Skills = () => {
   const gridStyle = {
     fontFamily: "'Montserrat', sans-serif",
     fontSize: "25px",
+    backgroundColor: "#D8D8D8",
+    paddingLeft: "0px",
+    paddingRight: "0px",
   };
 
   const titleStyle = {
     fontFamily: "'Kadwa', serif",
-    backgroundColor: "#45454e",
-    color: "#FFFFFF",
+    color: "#333333",
     width: "100%",
   };
 

@@ -51,10 +51,10 @@ const Slides = () => {
     const swipe = await singleSlide.current.getSwiper();
     singleSlide.current.scrollIntoView({
       behavior: "smooth",
-      block: "nearest",
-      inline: "start",
+      block: "start",
+      inline: "center",
     });
-    swipe.slideTo(index);
+    swipe.slideTo(index, 1000);
     setSelected(index);
   };
 
