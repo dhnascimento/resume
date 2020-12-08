@@ -84,6 +84,7 @@ const Slides = () => {
         >
           Skills
         </IonButton>
+
         <IonButton
           color="buttons"
           style={buttonSize.container(MobileMediaQuery)}
