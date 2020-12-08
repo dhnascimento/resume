@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { IonSlides, IonSlide, IonButton } from "@ionic/react";
 import { animations } from "react-animation";
@@ -45,6 +45,7 @@ const Slides = () => {
   };
 
   const singleSlide = useRef(null);
+  const [selected, setSelected] = useState(0);
 
   const selectSlide = async (index) => {
     const swipe = await singleSlide.current.getSwiper();
@@ -54,6 +55,7 @@ const Slides = () => {
       inline: "start",
     });
     swipe.slideTo(index);
+    setSelected(index);
   };
 
   const MobileMediaQuery = useMediaQuery("(min-width: 575px)");
@@ -69,35 +71,35 @@ const Slides = () => {
     <div style={slidesMain}>
       <div style={buttons}>
         <IonButton
-          color="skills"
+          color="buttons"
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(0)}
         >
           About
         </IonButton>
         <IonButton
-          color="skills"
+          color="buttons"
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(1)}
         >
           Skills
         </IonButton>
         <IonButton
-          color="projects"
+          color="buttons"
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(2)}
         >
           Projects
         </IonButton>
         <IonButton
-          color="education"
+          color="buttons"
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(3)}
         >
           Education
         </IonButton>
         <IonButton
-          color="expertise"
+          color="buttons"
           style={buttonSize.container(MobileMediaQuery)}
           onClick={() => selectSlide(4)}
         >
