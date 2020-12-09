@@ -152,7 +152,7 @@ const Education = () => {
           <IonCardHeader>
             <IonCardSubtitle>BrainStation</IonCardSubtitle>
             <IonCardTitle>Data Science Diploma Program</IonCardTitle>
-            <IonCardContent mode="md">October - December 2019</IonCardContent>
+            <IonCardContent mode="md">September - December 2019</IonCardContent>
           </IonCardHeader>
         </IonCard>
         <IonCard style={cardStyle}>
