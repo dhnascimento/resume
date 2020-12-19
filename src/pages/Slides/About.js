@@ -1,7 +1,10 @@
 import React from "react";
+import { IonIcon } from "@ionic/react";
+import { logoLinkedin, logoGithub, mailOpen } from "ionicons/icons";
 import { IonGrid, IonRow, IonCol } from "@ionic/react";
 import { animations } from "react-animation";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { ReactComponent as AboutPhoto } from "../../images/AboutPhoto2.svg";
 
 const About = () => {
   const SMediaQuery = useMediaQuery("(min-width: 786px)");
@@ -44,10 +47,11 @@ const About = () => {
     }),
   };
 
-  const gridStyle = {
-    // borderColor: "#000000",
+  const anchor = {
+    color: "#00A7AE",
+    display: "flex",
+    alignItems: "flex-end",
   };
-
   const gridBorder = {
     padding: "0px",
   };
@@ -70,12 +74,28 @@ const About = () => {
         Do you want to know more about me, my projects or do some networking?
         Please send me an email or add me on LinkedIn!
       </p>
+      <div style={{ display: "flex" }}>
+        <a
+          href="http://linkedin.com/in/danielhnascimento"
+          alt="Linkedin"
+          style={anchor}
+        >
+          <IonIcon icon={logoLinkedin} />
+        </a>
+        <a href="https://github.com/dhnascimento" alt="Github" style={anchor}>
+          <IonIcon icon={logoGithub} />
+        </a>
+        <a href="malito:danielhn@gmail.com" alt="Email" style={anchor}>
+          <IonIcon icon={mailOpen} />
+        </a>
+      </div>
     </div>
   );
 
   const RegularGrid = (
-    <IonRow style={gridStyle}>
+    <IonRow>
       <IonRow>
+        <AboutPhoto />
         <IonCol>{text}</IonCol>
       </IonRow>
     </IonRow>
@@ -83,7 +103,8 @@ const About = () => {
 
   const SmallGrid = (
     <div>
-      <IonCol style={gridStyle}>{text}</IonCol>
+      <AboutPhoto />
+      <IonCol>{text}</IonCol>
     </div>
   );
 
