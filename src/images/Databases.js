@@ -18,10 +18,6 @@ const Databases = () => {
         <IonCardTitle>MySQL</IonCardTitle>
       </IonCard>
       <IonCard>
-        <MongoDB style={svgSize} />
-        <IonCardTitle>MongoDB</IonCardTitle>
-      </IonCard>
-      <IonCard>
         <Github style={svgSize} />
         <IonCardTitle>Github</IonCardTitle>
       </IonCard>

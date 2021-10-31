@@ -24,6 +24,65 @@ const Expertise = () => {
       <IonItem>
         <IonAvatar slot="start">
           <img
+            src="https://svgshare.com/i/be7.svg"
+            alt="Boss Insights"
+          ></img>
+        </IonAvatar>
+        <IonLabel style={labelStyle}>
+          <div style={headerStyle}>
+            <span>Boss Insights</span>
+            <span>Toronto, Ontario</span>
+          </div>
+          <h3>Software Developer</h3>
+          <p>January 2021 – present</p>
+          <div>
+            <ul style={listStyle}>
+              <li>
+                Create new features and functionalities on the company's software.
+              </li>
+              <li>
+                Improve software usability by identifying and fixing bugs and implementing enhancements,
+                reducing the number of weekly customer support tickets by 15%.
+              </li>
+              <li>
+                Built features to improve user’s experience such as search box, table filters and messaging application.
+              </li>
+              <li>
+                Collaborated with the development of browser extension for document upload.
+              </li>
+              <li>
+                Design and built dashboard widgets to display data from accounting software API.
+              </li>
+            </ul>
+          </div>
+        </IonLabel>
+      </IonItem>
+      <IonItem>
+        <IonAvatar slot="start">
+          <img
+            src="https://svgshare.com/i/bdm.svg"
+            alt="Mortgage Broker Store"
+          ></img>
+        </IonAvatar>
+        <IonLabel style={labelStyle}>
+          <div style={headerStyle}>
+            <span>Mortgage Broker Store</span>
+            <span>Toronto, Ontario</span>
+          </div>
+          <h3>Front-End Developer (Part time)</h3>
+          <p>December 2020 – January 2021</p>
+          <div>
+            <ul style={listStyle}>
+              <li>
+                Developed mortgage-based calculator in JavaScript following MVC pattern.
+              </li>
+            </ul>
+          </div>
+        </IonLabel>
+      </IonItem>
+      <IonItem>
+        <IonAvatar slot="start">
+          <img
             src="https://seeklogo.com/images/B/Banco_do_Brasil-logo-6C6B7F5F01-seeklogo.com.png"
             alt="BB"
           ></img>
